@@ -60,8 +60,8 @@ result_dir = 'results/' + example + '/' + 'nfe' + str(nfe) + '/' + current_time
 os.makedirs(result_dir, exist_ok=True)
 
 MIP_solver = 'gurobi'
-MINLP_solvers = ['dicopt', 'knitro', 'baron']
-NLP_solvers = ['ipopth', 'knitro', 'conopt', 'baron']
+MINLP_solvers = ['dicopt', 'baron']
+NLP_solvers = ['ipopth', 'conopt', 'baron']
 
 strategy_list = [
     'gdp.bigm',
@@ -70,6 +70,7 @@ strategy_list = [
     'gdpopt.loa',
     'gdpopt.gloa',
     'gdpopt.ldsda',
+    'gdpopt.ldbd',
 ]
 
 json_result = {}
@@ -147,6 +148,7 @@ for strategy in strategy_list:
                     nlp_solver_args=dict(solver=NLP_solver),
                     mip_solver=MIP_solver,
                     time_limit=timelimit,
+                    keepfiles = True,
                 )
                 print(results)
             sys.stdout = stdout
@@ -178,7 +180,7 @@ for strategy in strategy_list:
                 result_dir + '/' + strategy + '_' + MINLP_solver + '.json', 'w'
             ) as f:
                 json.dump(results.json_repn(), f)
-    elif strategy == 'gdpopt.ldsda':
+    elif strategy in ['gdpopt.ldsda','gdpopt.ldbd']:
         for NLP_solver in NLP_solvers:
             print('Benchmarking', strategy, NLP_solver)
             mode_transfer_list = [False, True]
