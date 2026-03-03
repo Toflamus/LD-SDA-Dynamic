@@ -1,0 +1,3506 @@
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 14:28:32 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 6 columns and 6 nonzeros (Min)
+Model fingerprint: 0x10aaeb6b
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [3e-02, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [7e+08, 7e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -1.00001e+08
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.000e+08 -1.000e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -1.00001e+08 
+No other solutions better than -1.00001e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.000009928726e+08, best bound -1.000009928726e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 14:28:32 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 6 columns and 12 nonzeros (Min)
+Model fingerprint: 0x321eb1a5
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [3e-02, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [3e+08, 7e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: objective -4.964363e+02, 2 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    -496.4363062 -496.43631  0.00%     -    0s
+
+Explored 1 nodes (2 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -496.436 1e+08 
+No other solutions better than -496.436
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -4.964363061786e+02, best bound -4.964363061786e+02, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 14:28:49 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 5 columns and 5 nonzeros (Min)
+Model fingerprint: 0xa259ada5
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 4 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [5e-02, 5e+07]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [1e+08, 1e+08]
+
+Found heuristic solution: objective -5.00007e+07
+Found heuristic solution: objective -1.50001e+08
+Variable types: 1 continuous, 4 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.500e+08 -1.500e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -1.50001e+08 -5.00007e+07 
+No other solutions better than -1.50001e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.500012401656e+08, best bound -1.500012401656e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 14:28:53 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 3 columns and 3 nonzeros (Min)
+Model fingerprint: 0x89a143aa
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 5e+00]
+  RHS range        [1e+08, 1e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -3.00002e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -3.000e+08 -3.000e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -3.00002e+08 
+No other solutions better than -3.00002e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -3.000019857452e+08, best bound -3.000019857452e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 14:28:58 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 3 columns and 6 nonzeros (Min)
+Model fingerprint: 0xbe140c09
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [3e-02, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 5e+00]
+  RHS range        [5e+02, 1e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: objective -4.964369e+02, 3 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    -496.4369210 -496.43692  0.00%     -    0s
+
+Explored 1 nodes (3 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -496.437 1e+08 
+No other solutions better than -496.437
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -4.964369209529e+02, best bound -4.964369209529e+02, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 14:29:03 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 3 columns and 3 nonzeros (Min)
+Model fingerprint: 0x8458e59d
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+07]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 5e+00]
+  RHS range        [5e+07, 5e+07]
+
+Found heuristic solution: objective -1.50001e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.500e+08 -1.500e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -1.50001e+08 
+No other solutions better than -1.50001e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.500012385491e+08, best bound -1.500012385491e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 14:29:08 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 3 columns and 5 nonzeros (Min)
+Model fingerprint: 0x9198a9cd
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [3e-02, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 5e+00]
+  RHS range        [5e+02, 2e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -489.6835273
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: objective -4.964369e+02, 3 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    -496.4369210 -496.43692  0.00%     -    0s
+
+Explored 1 nodes (3 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -496.437 -489.684 
+No other solutions better than -496.437
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -4.964369209529e+02, best bound -4.964369209529e+02, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 14:29:11 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 6 columns and 6 nonzeros (Min)
+Model fingerprint: 0x267d4e28
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [3e-02, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [7e+08, 7e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -1.00001e+08
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.000e+08 -1.000e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -1.00001e+08 
+No other solutions better than -1.00001e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.000009928726e+08, best bound -1.000009928726e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 14:29:11 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 6 columns and 12 nonzeros (Min)
+Model fingerprint: 0xd4cca40c
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [3e-02, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [3e+08, 7e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: objective -4.964363e+02, 2 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    -496.4363061 -496.43631  0.00%     -    0s
+
+Explored 1 nodes (2 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -496.436 1e+08 
+No other solutions better than -496.436
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -4.964363060892e+02, best bound -4.964363060892e+02, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 14:29:22 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 5 columns and 5 nonzeros (Min)
+Model fingerprint: 0x94933102
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 4 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [5e-02, 5e+07]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [1e+08, 1e+08]
+
+Found heuristic solution: objective -5.00007e+07
+Found heuristic solution: objective -1.50001e+08
+Variable types: 1 continuous, 4 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.500e+08 -1.500e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -1.50001e+08 -5.00007e+07 
+No other solutions better than -1.50001e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.500012401656e+08, best bound -1.500012401656e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 14:29:24 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 3 columns and 3 nonzeros (Min)
+Model fingerprint: 0x619525d5
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 5e+00]
+  RHS range        [1e+08, 1e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -3.00002e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -3.000e+08 -3.000e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -3.00002e+08 
+No other solutions better than -3.00002e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -3.000019857452e+08, best bound -3.000019857452e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 14:29:26 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 3 columns and 6 nonzeros (Min)
+Model fingerprint: 0x2abda91e
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [3e-02, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 5e+00]
+  RHS range        [5e+02, 1e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: objective -4.964369e+02, 3 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    -496.4369206 -496.43692  0.00%     -    0s
+
+Explored 1 nodes (3 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -496.437 1e+08 
+No other solutions better than -496.437
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -4.964369206398e+02, best bound -4.964369206398e+02, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 14:29:29 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 3 columns and 3 nonzeros (Min)
+Model fingerprint: 0xfe9b011f
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+07]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 5e+00]
+  RHS range        [5e+07, 5e+07]
+
+Found heuristic solution: objective -1.50001e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.500e+08 -1.500e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -1.50001e+08 
+No other solutions better than -1.50001e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.500012385491e+08, best bound -1.500012385491e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 14:29:32 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 3 columns and 5 nonzeros (Min)
+Model fingerprint: 0xec601bc0
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [3e-02, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 5e+00]
+  RHS range        [5e+02, 2e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -489.6835269
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: objective -4.964369e+02, 3 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    -496.4369206 -496.43692  0.00%     -    0s
+
+Explored 1 nodes (3 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -496.437 -489.684 
+No other solutions better than -496.437
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -4.964369206398e+02, best bound -4.964369206398e+02, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 14:39:59 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 6 columns and 6 nonzeros (Min)
+Model fingerprint: 0x10aaeb6b
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [3e-02, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [7e+08, 7e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -1.00001e+08
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.000e+08 -1.000e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -1.00001e+08 
+No other solutions better than -1.00001e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.000009928726e+08, best bound -1.000009928726e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 14:39:59 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 6 columns and 12 nonzeros (Min)
+Model fingerprint: 0x321eb1a5
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [3e-02, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [3e+08, 7e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: objective -4.964363e+02, 2 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    -496.4363062 -496.43631  0.00%     -    0s
+
+Explored 1 nodes (2 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -496.436 1e+08 
+No other solutions better than -496.436
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -4.964363061786e+02, best bound -4.964363061786e+02, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 14:40:15 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 5 columns and 5 nonzeros (Min)
+Model fingerprint: 0xa259ada5
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 4 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [5e-02, 5e+07]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [1e+08, 1e+08]
+
+Found heuristic solution: objective -5.00007e+07
+Found heuristic solution: objective -1.50001e+08
+Variable types: 1 continuous, 4 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.500e+08 -1.500e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -1.50001e+08 -5.00007e+07 
+No other solutions better than -1.50001e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.500012401656e+08, best bound -1.500012401656e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 14:40:20 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 3 columns and 3 nonzeros (Min)
+Model fingerprint: 0x89a143aa
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 5e+00]
+  RHS range        [1e+08, 1e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -3.00002e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -3.000e+08 -3.000e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -3.00002e+08 
+No other solutions better than -3.00002e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -3.000019857452e+08, best bound -3.000019857452e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 14:40:24 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 3 columns and 6 nonzeros (Min)
+Model fingerprint: 0xbe140c09
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [3e-02, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 5e+00]
+  RHS range        [5e+02, 1e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: objective -4.964369e+02, 3 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    -496.4369210 -496.43692  0.00%     -    0s
+
+Explored 1 nodes (3 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -496.437 1e+08 
+No other solutions better than -496.437
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -4.964369209529e+02, best bound -4.964369209529e+02, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 14:40:30 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 3 columns and 3 nonzeros (Min)
+Model fingerprint: 0x8458e59d
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+07]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 5e+00]
+  RHS range        [5e+07, 5e+07]
+
+Found heuristic solution: objective -1.50001e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.500e+08 -1.500e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -1.50001e+08 
+No other solutions better than -1.50001e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.500012385491e+08, best bound -1.500012385491e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 14:40:36 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 3 columns and 5 nonzeros (Min)
+Model fingerprint: 0x9198a9cd
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [3e-02, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 5e+00]
+  RHS range        [5e+02, 2e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -489.6835273
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: objective -4.964369e+02, 3 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    -496.4369210 -496.43692  0.00%     -    0s
+
+Explored 1 nodes (3 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -496.437 -489.684 
+No other solutions better than -496.437
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -4.964369209529e+02, best bound -4.964369209529e+02, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 14:40:38 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 6 columns and 6 nonzeros (Min)
+Model fingerprint: 0x267d4e28
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [3e-02, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [7e+08, 7e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -1.00001e+08
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.000e+08 -1.000e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -1.00001e+08 
+No other solutions better than -1.00001e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.000009928726e+08, best bound -1.000009928726e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 14:40:38 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 6 columns and 12 nonzeros (Min)
+Model fingerprint: 0xd4cca40c
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [3e-02, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [3e+08, 7e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: objective -4.964363e+02, 2 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    -496.4363061 -496.43631  0.00%     -    0s
+
+Explored 1 nodes (2 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -496.436 1e+08 
+No other solutions better than -496.436
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -4.964363060892e+02, best bound -4.964363060892e+02, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 14:40:50 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 5 columns and 5 nonzeros (Min)
+Model fingerprint: 0x94933102
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 4 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [5e-02, 5e+07]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [1e+08, 1e+08]
+
+Found heuristic solution: objective -5.00007e+07
+Found heuristic solution: objective -1.50001e+08
+Variable types: 1 continuous, 4 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.500e+08 -1.500e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -1.50001e+08 -5.00007e+07 
+No other solutions better than -1.50001e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.500012401656e+08, best bound -1.500012401656e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 14:40:52 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 3 columns and 3 nonzeros (Min)
+Model fingerprint: 0x619525d5
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 5e+00]
+  RHS range        [1e+08, 1e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -3.00002e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -3.000e+08 -3.000e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -3.00002e+08 
+No other solutions better than -3.00002e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -3.000019857452e+08, best bound -3.000019857452e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 14:40:54 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 3 columns and 6 nonzeros (Min)
+Model fingerprint: 0x2abda91e
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [3e-02, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 5e+00]
+  RHS range        [5e+02, 1e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: objective -4.964369e+02, 3 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    -496.4369206 -496.43692  0.00%     -    0s
+
+Explored 1 nodes (3 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -496.437 1e+08 
+No other solutions better than -496.437
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -4.964369206398e+02, best bound -4.964369206398e+02, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 14:40:58 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 3 columns and 3 nonzeros (Min)
+Model fingerprint: 0xfe9b011f
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+07]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 5e+00]
+  RHS range        [5e+07, 5e+07]
+
+Found heuristic solution: objective -1.50001e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.500e+08 -1.500e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -1.50001e+08 
+No other solutions better than -1.50001e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.500012385491e+08, best bound -1.500012385491e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 14:41:01 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 3 columns and 5 nonzeros (Min)
+Model fingerprint: 0xec601bc0
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [3e-02, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 5e+00]
+  RHS range        [5e+02, 2e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -489.6835269
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: objective -4.964369e+02, 3 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    -496.4369206 -496.43692  0.00%     -    0s
+
+Explored 1 nodes (3 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -496.437 -489.684 
+No other solutions better than -496.437
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -4.964369206398e+02, best bound -4.964369206398e+02, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 16:19:28 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 6 columns and 6 nonzeros (Min)
+Model fingerprint: 0x42527a04
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [7e+08, 7e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -1.00000e+08
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.000e+08 -1.000e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -1e+08 
+No other solutions better than -1e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.000000712212e+08, best bound -1.000000712212e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 16:19:29 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 6 columns and 11 nonzeros (Min)
+Model fingerprint: 0x30d95b58
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [3e+08, 7e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 9.999999e+07
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: objective -3.699037e+01, 2 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0     -36.9903699  -36.99037  0.00%     -    0s
+
+Explored 1 nodes (2 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -36.9904 1e+08 
+No other solutions better than -36.9904
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -3.699036994951e+01, best bound -3.699036994951e+01, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 16:19:30 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 3 rows, 6 columns and 17 nonzeros (Min)
+Model fingerprint: 0x38dd1068
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [3e+08, 2e+09]
+Warning: Model contains large matrix coefficients
+Warning: Model contains large rhs
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Variable types: 1 continuous, 5 integer (0 binary)
+Found heuristic solution: objective 1.000000e+08
+Found heuristic solution: objective -35.6105865
+
+Root relaxation: cutoff, 3 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0       -35.61059  -35.61059  0.00%     -    0s
+
+Explored 1 nodes (3 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -35.6106 1e+08 
+No other solutions better than -35.6106
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -3.561058649421e+01, best bound -3.561058649421e+01, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 16:25:35 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 6 columns and 6 nonzeros (Min)
+Model fingerprint: 0x4e3547c8
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e-10, 5e+07]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [1e+08, 1e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -5.00000e+07
+Found heuristic solution: objective -1.50000e+08
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.500e+08 -1.500e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -1.5e+08 -5e+07 
+No other solutions better than -1.5e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.500000432793e+08, best bound -1.500000432793e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 16:25:36 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 6 columns and 9 nonzeros (Min)
+Model fingerprint: 0xc7182820
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e-10, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [1e+08, 1e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: objective -6.666673e+07, 2 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -6.667e+07    0    1 1.0000e+08 -6.667e+07   167%     -    0s
+H    0     0                    -5.00000e+07 -6.667e+07  33.3%     -    0s
+
+Explored 1 nodes (2 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -5e+07 1e+08 
+No other solutions better than -5e+07
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -5.000004605641e+07, best bound -5.000004605641e+07, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 16:25:37 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 3 rows, 6 columns and 13 nonzeros (Min)
+Model fingerprint: 0x43b18dec
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e-08, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [4e+07, 1e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -1.00000e+08
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.000e+08 -1.000e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -1e+08 
+No other solutions better than -1e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.000001055845e+08, best bound -1.000001055845e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 16:25:37 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 4 rows, 6 columns and 16 nonzeros (Min)
+Model fingerprint: 0xcfd9d09c
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e-08, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [4e+07, 1e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: objective -5.555561e+07, 2 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -5.556e+07    0    1 1.0000e+08 -5.556e+07   156%     -    0s
+H    0     0                    -2.00000e+07 -5.556e+07   178%     -    0s
+
+Explored 1 nodes (2 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -2e+07 1e+08 
+No other solutions better than -2e+07
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -2.000003237643e+07, best bound -2.000003237643e+07, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 16:25:38 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 5 rows, 6 columns and 22 nonzeros (Min)
+Model fingerprint: 0xf8ddab19
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [7e-09, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [4e+07, 2e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -1.00000e+08
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.000e+08 -1.000e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -1e+08 
+No other solutions better than -1e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.000001055845e+08, best bound -1.000001055845e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 16:25:39 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 6 rows, 6 columns and 25 nonzeros (Min)
+Model fingerprint: 0xaaae788b
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [7e-09, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [4e+07, 2e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: objective -6.923083e+07, 4 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -6.923e+07    0    2 1.0000e+08 -6.923e+07   169%     -    0s
+H    0     0                    -2.00000e+07 -6.923e+07   246%     -    0s
+
+Explored 1 nodes (4 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -2e+07 1e+08 
+No other solutions better than -2e+07
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -2.000003237643e+07, best bound -2.000003237643e+07, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 16:25:39 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 7 rows, 6 columns and 30 nonzeros (Min)
+Model fingerprint: 0x0026eeb4
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [4e-09, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [4e+07, 2e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Variable types: 1 continuous, 5 integer (0 binary)
+Found heuristic solution: objective 1.000000e+08
+Found heuristic solution: objective 9.999996e+07
+Found heuristic solution: objective -52.7922263
+
+Root relaxation: objective -5.714292e+07, 5 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -5.714e+07    0    3  -52.79223 -5.714e+07      -     -    0s
+H    0     0                     -52.7922266 -5.714e+07      -     -    0s
+     0     0 -5.714e+07    0    3  -52.79223 -5.714e+07      -     -    0s
+     0     1 -5.000e+07    0    3  -52.79223 -5.000e+07      -     -    0s
+
+Explored 2 nodes (6 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 4: -52.7922 -52.7922 1e+08 1e+08 
+No other solutions better than -52.7922
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -5.279222655296e+01, best bound -5.279222655296e+01, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 16:26:27 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 3 columns and 3 nonzeros (Min)
+Model fingerprint: 0xd46673fb
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 5e+00]
+  RHS range        [1e+08, 1e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -3.00000e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -3.000e+08 -3.000e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -3e+08 
+No other solutions better than -3e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -3.000001314041e+08, best bound -3.000001314041e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 16:27:42 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 3 columns and 6 nonzeros (Min)
+Model fingerprint: 0xe3e9ef54
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 5e+00]
+  RHS range        [5e+01, 1e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -52.7922262
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -52.7922 
+No other solutions better than -52.7922
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -5.279222624004e+01, best bound -5.279222624004e+01, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 16:28:33 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 3 columns and 3 nonzeros (Min)
+Model fingerprint: 0xca2bcef9
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+07]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 5e+00]
+  RHS range        [5e+07, 5e+07]
+
+Found heuristic solution: objective -1.50000e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.500e+08 -1.500e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -1.5e+08 
+No other solutions better than -1.5e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.500000686155e+08, best bound -1.500000686155e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 16:29:44 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 3 columns and 5 nonzeros (Min)
+Model fingerprint: 0x11a4a663
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 5e+00]
+  RHS range        [4e+01, 2e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -52.7922262
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -52.7922 
+No other solutions better than -52.7922
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -5.279222624004e+01, best bound -5.279222624004e+01, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 16:30:01 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 6 columns and 6 nonzeros (Min)
+Model fingerprint: 0x42527a04
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [7e+08, 7e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -1.00000e+08
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.000e+08 -1.000e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -1e+08 
+No other solutions better than -1e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.000000712212e+08, best bound -1.000000712212e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 16:30:02 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 6 columns and 11 nonzeros (Min)
+Model fingerprint: 0x30d95b58
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [3e+08, 7e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 9.999999e+07
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: objective -3.699037e+01, 2 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0     -36.9903699  -36.99037  0.00%     -    0s
+
+Explored 1 nodes (2 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -36.9904 1e+08 
+No other solutions better than -36.9904
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -3.699036994951e+01, best bound -3.699036994951e+01, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 16:30:03 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 3 rows, 6 columns and 17 nonzeros (Min)
+Model fingerprint: 0x38dd1068
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [3e+08, 2e+09]
+Warning: Model contains large matrix coefficients
+Warning: Model contains large rhs
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Variable types: 1 continuous, 5 integer (0 binary)
+Found heuristic solution: objective 1.000000e+08
+Found heuristic solution: objective -35.6105865
+
+Root relaxation: cutoff, 3 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0       -35.61059  -35.61059  0.00%     -    0s
+
+Explored 1 nodes (3 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -35.6106 1e+08 
+No other solutions better than -35.6106
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -3.561058649421e+01, best bound -3.561058649421e+01, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 16:31:29 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 6 columns and 6 nonzeros (Min)
+Model fingerprint: 0x892c491f
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [3e-09, 5e+07]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [1e+08, 1e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -5.00000e+07
+Found heuristic solution: objective -1.50000e+08
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.500e+08 -1.500e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -1.5e+08 -5e+07 
+No other solutions better than -1.5e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.500000432793e+08, best bound -1.500000432793e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 16:31:30 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 6 columns and 9 nonzeros (Min)
+Model fingerprint: 0x7da4626b
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [8e+01, 1e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: objective -8.174148e+01, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0     -81.7414792  -81.74148  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -81.7415 1e+08 
+No other solutions better than -81.7415
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -8.174147915585e+01, best bound -8.174147915585e+01, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 16:31:31 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 3 rows, 6 columns and 13 nonzeros (Min)
+Model fingerprint: 0x426a381d
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e-08, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [8e+01, 1e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: objective -8.031539e+01, 2 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0     -80.3153947  -80.31539  0.00%     -    0s
+
+Explored 1 nodes (2 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -80.3154 1e+08 
+No other solutions better than -80.3154
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -8.031539471376e+01, best bound -8.031539471376e+01, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 16:31:32 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 4 rows, 6 columns and 17 nonzeros (Min)
+Model fingerprint: 0x733830e0
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e-08, 2e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [8e+01, 5e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -59.0073403
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: objective -7.894854e+01, 3 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0     -78.9485429  -78.94854  0.00%     -    0s
+
+Explored 1 nodes (3 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -78.9485 -59.0073 
+No other solutions better than -78.9485
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -7.894854287994e+01, best bound -7.894854287994e+01, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 16:31:32 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 5 rows, 6 columns and 22 nonzeros (Min)
+Model fingerprint: 0xe1001ec4
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [7e-09, 2e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [8e+01, 5e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -6.6946980
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: objective -5.279223e+01, 4 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0     -52.7922262  -52.79223  0.00%     -    0s
+
+Explored 1 nodes (4 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -52.7922 -6.6947 
+No other solutions better than -52.7922
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -5.279222622630e+01, best bound -5.279222622630e+01, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 16:31:46 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 3 columns and 3 nonzeros (Min)
+Model fingerprint: 0xd46673fb
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 5e+00]
+  RHS range        [1e+08, 1e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -3.00000e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -3.000e+08 -3.000e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -3e+08 
+No other solutions better than -3e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -3.000001314041e+08, best bound -3.000001314041e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 16:32:05 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 3 columns and 6 nonzeros (Min)
+Model fingerprint: 0xb1c06a93
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 5e+00]
+  RHS range        [5e+01, 1e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -52.7922262
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -52.7922 
+No other solutions better than -52.7922
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -5.279222622514e+01, best bound -5.279222622514e+01, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 16:32:29 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 3 columns and 3 nonzeros (Min)
+Model fingerprint: 0xca2bcef9
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+07]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 5e+00]
+  RHS range        [5e+07, 5e+07]
+
+Found heuristic solution: objective -1.50000e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.500e+08 -1.500e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -1.5e+08 
+No other solutions better than -1.5e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.500000686155e+08, best bound -1.500000686155e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 16:32:56 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 3 columns and 5 nonzeros (Min)
+Model fingerprint: 0x5fe75e88
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 5e+00]
+  RHS range        [4e+01, 2e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -52.7922262
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -52.7922 
+No other solutions better than -52.7922
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -5.279222622514e+01, best bound -5.279222622514e+01, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 17:24:52 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 7 columns and 7 nonzeros (Min)
+Model fingerprint: 0x7a5a9a00
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 6 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [1e+09, 1e+09]
+Warning: Model contains large matrix coefficients
+Warning: Model contains large rhs
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -1.00000e+08
+Variable types: 1 continuous, 6 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.000e+08 -1.000e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -1e+08 
+No other solutions better than -1e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.000001119750e+08, best bound -1.000001119750e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 17:24:53 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 7 columns and 13 nonzeros (Min)
+Model fingerprint: 0x6c93296d
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 6 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [6e+08, 1e+09]
+Warning: Model contains large matrix coefficients
+Warning: Model contains large rhs
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 9.999999e+07
+Variable types: 1 continuous, 6 integer (0 binary)
+
+Root relaxation: objective -5.864160e+01, 2 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0     -58.6416044  -58.64160  0.00%     -    0s
+
+Explored 1 nodes (2 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -58.6416 1e+08 
+No other solutions better than -58.6416
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -5.864160443022e+01, best bound -5.864160443022e+01, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 17:24:54 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 3 rows, 7 columns and 20 nonzeros (Min)
+Model fingerprint: 0x887c7771
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 6 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [6e+08, 2e+09]
+Warning: Model contains large matrix coefficients
+Warning: Model contains large rhs
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Variable types: 1 continuous, 6 integer (0 binary)
+Found heuristic solution: objective 1.000000e+08
+Found heuristic solution: objective -55.9874865
+
+Root relaxation: cutoff, 3 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0       -55.98749  -55.98749  0.00%     -    0s
+
+Explored 1 nodes (3 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -55.9875 1e+08 
+No other solutions better than -55.9875
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -5.598748651147e+01, best bound -5.598748651147e+01, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 17:35:27 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 5 columns and 5 nonzeros (Min)
+Model fingerprint: 0xbcea6c8e
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 4 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [4e-09, 5e+07]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [1e+08, 1e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -5.00001e+07
+Found heuristic solution: objective -1.50000e+08
+Variable types: 1 continuous, 4 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.500e+08 -1.500e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -1.5e+08 -5.00001e+07 
+No other solutions better than -1.5e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.500000967332e+08, best bound -1.500000967332e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 17:35:28 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 6 columns and 9 nonzeros (Min)
+Model fingerprint: 0x638be2e9
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [4e-09, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [1e+08, 1e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 9.999990e+07
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: objective -6.666676e+07, 2 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -6.667e+07    0    1 1.0000e+08 -6.667e+07   167%     -    0s
+H    0     0                    -5.00001e+07 -6.667e+07  33.3%     -    0s
+
+Explored 1 nodes (2 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -5.00001e+07 9.99999e+07 
+No other solutions better than -5.00001e+07
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -5.000006209043e+07, best bound -5.000006209043e+07, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 17:35:29 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 3 rows, 7 columns and 12 nonzeros (Min)
+Model fingerprint: 0x4898fcfd
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 6 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e-09, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [1e+08, 1e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -1.00000e+08
+Variable types: 1 continuous, 6 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.000e+08 -1.000e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -1e+08 
+No other solutions better than -1e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.000002448474e+08, best bound -1.000002448474e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 17:35:30 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 4 rows, 7 columns and 19 nonzeros (Min)
+Model fingerprint: 0x8b117bd5
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 6 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e-09, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [1e+08, 1e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 6 integer (0 binary)
+
+Root relaxation: objective -6.666676e+07, 5 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -6.667e+07    0    2 1.0000e+08 -6.667e+07   167%     -    0s
+H    0     0                    -5.00001e+07 -6.667e+07  33.3%     -    0s
+     0     0 -6.667e+07    0    2 -5.000e+07 -6.667e+07  33.3%     -    0s
+
+Explored 1 nodes (5 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -5.00001e+07 1e+08 
+No other solutions better than -5.00001e+07
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -5.000006209043e+07, best bound -5.000006209043e+07, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 17:35:30 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 5 rows, 7 columns and 24 nonzeros (Min)
+Model fingerprint: 0x0d72347c
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 6 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e-09, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [1e+08, 1e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Variable types: 1 continuous, 6 integer (0 binary)
+Found heuristic solution: objective 1.000000e+08
+Found heuristic solution: objective 9.999996e+07
+Found heuristic solution: objective 9.999995e+07
+Found heuristic solution: objective 9.999990e+07
+
+Root relaxation: objective -2.500009e+07, 7 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -2.500e+07    0    4 1.0000e+08 -2.500e+07   125%     -    0s
+H    0     0                     -50.6792499 -2.500e+07      -     -    0s
+H    0     0                    -122.4237212 -2.500e+07      -     -    0s
+     0     0          -    0      -122.42372 -122.42372  0.00%     -    0s
+
+Explored 1 nodes (7 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 6: -122.424 -50.6792 9.99999e+07 ... 1e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.224237212241e+02, best bound -1.224237219542e+02, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 17:36:22 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 3 columns and 3 nonzeros (Min)
+Model fingerprint: 0x87ef6d59
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 6e+00]
+  RHS range        [1e+08, 1e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -4.00000e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -4.000e+08 -4.000e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -4e+08 
+No other solutions better than -4e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -4.000002533962e+08, best bound -4.000002533962e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 17:39:21 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 3 columns and 6 nonzeros (Min)
+Model fingerprint: 0x5f644793
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 6e+00]
+  RHS range        [4e+02, 1e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: objective -2.773352e+02, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    -277.3351926 -277.33519  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -277.335 1e+08 
+No other solutions better than -277.335
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -2.773351926082e+02, best bound -2.773351926082e+02, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 17:41:59 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 3 rows, 3 columns and 9 nonzeros (Min)
+Model fingerprint: 0x93ddc5eb
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 6e+00]
+  RHS range        [8e+01, 1e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: objective -1.224237e+02, 2 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    -122.4237212 -122.42372  0.00%     -    0s
+
+Explored 1 nodes (2 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -122.424 1e+08 
+No other solutions better than -122.424
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.224237212356e+02, best bound -1.224237212356e+02, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 17:43:26 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 3 columns and 3 nonzeros (Min)
+Model fingerprint: 0xcb29450c
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+07]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 6e+00]
+  RHS range        [5e+07, 5e+07]
+
+Found heuristic solution: objective -2.00000e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -2.000e+08 -2.000e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -2e+08 
+No other solutions better than -2e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -2.000001215968e+08, best bound -2.000001215968e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 17:46:04 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 3 columns and 5 nonzeros (Min)
+Model fingerprint: 0xf1d36ed0
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 6e+00]
+  RHS range        [4e+02, 2e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: objective -2.773352e+02, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    -277.3351926 -277.33519  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -277.335 1e+08 
+No other solutions better than -277.335
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -2.773351926082e+02, best bound -2.773351926082e+02, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 17:50:57 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 3 rows, 3 columns and 8 nonzeros (Min)
+Model fingerprint: 0x372e54cd
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 6e+00]
+  RHS range        [2e+02, 2e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: objective -1.224237e+02, 4 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    -122.4237212 -122.42372  0.00%     -    0s
+
+Explored 1 nodes (4 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -122.424 1e+08 
+No other solutions better than -122.424
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.224237212356e+02, best bound -1.224237212356e+02, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 17:51:15 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 7 columns and 7 nonzeros (Min)
+Model fingerprint: 0x0c435fcf
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 6 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [1e+09, 1e+09]
+Warning: Model contains large matrix coefficients
+Warning: Model contains large rhs
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -1.00000e+08
+Variable types: 1 continuous, 6 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.000e+08 -1.000e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -1e+08 
+No other solutions better than -1e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.000001119750e+08, best bound -1.000001119750e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 17:51:16 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 7 columns and 13 nonzeros (Min)
+Model fingerprint: 0xe4cfabae
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 6 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [6e+08, 1e+09]
+Warning: Model contains large matrix coefficients
+Warning: Model contains large rhs
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 9.999999e+07
+Variable types: 1 continuous, 6 integer (0 binary)
+
+Root relaxation: objective -5.864160e+01, 2 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0     -58.6416045  -58.64160  0.00%     -    0s
+
+Explored 1 nodes (2 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -58.6416 1e+08 
+No other solutions better than -58.6416
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -5.864160454943e+01, best bound -5.864160454943e+01, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 17:51:17 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 3 rows, 7 columns and 20 nonzeros (Min)
+Model fingerprint: 0xc6aff1bb
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 6 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [6e+08, 2e+09]
+Warning: Model contains large matrix coefficients
+Warning: Model contains large rhs
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Variable types: 1 continuous, 6 integer (0 binary)
+Found heuristic solution: objective 1.000000e+08
+Found heuristic solution: objective -55.9874865
+
+Root relaxation: cutoff, 3 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0       -55.98749  -55.98749  0.00%     -    0s
+
+Explored 1 nodes (3 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -55.9875 1e+08 
+No other solutions better than -55.9875
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -5.598748651147e+01, best bound -5.598748651147e+01, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 17:53:55 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 5 columns and 5 nonzeros (Min)
+Model fingerprint: 0x1cd76bb5
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 4 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e-08, 5e+07]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [1e+08, 1e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -5.00001e+07
+Found heuristic solution: objective -1.50000e+08
+Variable types: 1 continuous, 4 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.500e+08 -1.500e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -1.5e+08 -5.00001e+07 
+No other solutions better than -1.5e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.500000967333e+08, best bound -1.500000967333e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 17:53:56 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 6 columns and 9 nonzeros (Min)
+Model fingerprint: 0xb833a603
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e-08, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [1e+08, 1e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 9.999990e+07
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: objective -6.666676e+07, 2 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -6.667e+07    0    1 1.0000e+08 -6.667e+07   167%     -    0s
+H    0     0                    -5.00001e+07 -6.667e+07  33.3%     -    0s
+
+Explored 1 nodes (2 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -5.00001e+07 9.99999e+07 
+No other solutions better than -5.00001e+07
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -5.000006209043e+07, best bound -5.000006209043e+07, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 17:53:57 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 3 rows, 7 columns and 12 nonzeros (Min)
+Model fingerprint: 0x82e1e5f0
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 6 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e-09, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [1e+08, 1e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -1.00000e+08
+Variable types: 1 continuous, 6 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.000e+08 -1.000e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -1e+08 
+No other solutions better than -1e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.000002448474e+08, best bound -1.000002448474e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 17:53:58 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 4 rows, 7 columns and 19 nonzeros (Min)
+Model fingerprint: 0x4f183316
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 6 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e-09, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [1e+08, 1e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 6 integer (0 binary)
+
+Root relaxation: objective -6.666676e+07, 5 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -6.667e+07    0    2 1.0000e+08 -6.667e+07   167%     -    0s
+H    0     0                    -5.00001e+07 -6.667e+07  33.3%     -    0s
+     0     0 -6.667e+07    0    2 -5.000e+07 -6.667e+07  33.3%     -    0s
+
+Explored 1 nodes (5 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -5.00001e+07 1e+08 
+No other solutions better than -5.00001e+07
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -5.000006209043e+07, best bound -5.000006209043e+07, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 17:53:58 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 5 rows, 7 columns and 24 nonzeros (Min)
+Model fingerprint: 0x8947b143
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 6 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e-09, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [1e+08, 1e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Variable types: 1 continuous, 6 integer (0 binary)
+Found heuristic solution: objective 1.000000e+08
+Found heuristic solution: objective 9.999995e+07
+Found heuristic solution: objective 9.999993e+07
+
+Root relaxation: objective -2.500009e+07, 7 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -2.500e+07    0    4 1.0000e+08 -2.500e+07   125%     -    0s
+H    0     0                     -50.6792499 -2.500e+07      -     -    0s
+H    0     0                    -122.4237212 -2.500e+07      -     -    0s
+     0     0     cutoff    0      -122.42372 -122.42372  0.00%     -    0s
+
+Explored 1 nodes (9 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 5: -122.424 -50.6792 9.99999e+07 ... 1e+08
+No other solutions better than -122.424
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.224237212241e+02, best bound -1.224237212241e+02, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 17:54:13 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 3 columns and 3 nonzeros (Min)
+Model fingerprint: 0x37a3ddf5
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 6e+00]
+  RHS range        [1e+08, 1e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -4.00000e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -4.000e+08 -4.000e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -4e+08 
+No other solutions better than -4e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -4.000002533962e+08, best bound -4.000002533962e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 17:54:31 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 3 columns and 6 nonzeros (Min)
+Model fingerprint: 0x288d1a25
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 6e+00]
+  RHS range        [4e+02, 1e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: objective -2.773352e+02, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    -277.3351924 -277.33519  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -277.335 1e+08 
+No other solutions better than -277.335
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -2.773351924326e+02, best bound -2.773351924326e+02, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 17:54:46 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 3 rows, 3 columns and 9 nonzeros (Min)
+Model fingerprint: 0xb27154d9
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 6e+00]
+  RHS range        [8e+01, 1e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: objective -1.224237e+02, 2 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    -122.4237212 -122.42372  0.00%     -    0s
+
+Explored 1 nodes (2 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -122.424 1e+08 
+No other solutions better than -122.424
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.224237212158e+02, best bound -1.224237212158e+02, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 17:55:10 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 3 columns and 3 nonzeros (Min)
+Model fingerprint: 0x2809342a
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+07]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 6e+00]
+  RHS range        [5e+07, 5e+07]
+
+Found heuristic solution: objective -2.00000e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -2.000e+08 -2.000e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -2e+08 
+No other solutions better than -2e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -2.000001215969e+08, best bound -2.000001215969e+08, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 17:55:37 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 3 columns and 5 nonzeros (Min)
+Model fingerprint: 0x5ab52ff7
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 6e+00]
+  RHS range        [4e+02, 2e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: objective -2.773352e+02, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    -277.3351924 -277.33519  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -277.335 1e+08 
+No other solutions better than -277.335
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -2.773351924326e+02, best bound -2.773351924326e+02, gap 0.0000%
+
+Gurobi 13.0.1 (linux64) logging started Tue Mar  3 17:55:52 2026
+
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 3 rows, 3 columns and 8 nonzeros (Min)
+Model fingerprint: 0x3afbec21
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 6e+00]
+  RHS range        [2e+02, 2e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: objective -1.224237e+02, 4 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    -122.4237212 -122.42372  0.00%     -    0s
+
+Explored 1 nodes (4 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -122.424 1e+08 
+No other solutions better than -122.424
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.224237212158e+02, best bound -1.224237212158e+02, gap 0.0000%

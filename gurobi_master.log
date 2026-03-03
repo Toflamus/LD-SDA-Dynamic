@@ -1,0 +1,47 @@
+Solver command line: []
+
+Read LP format model from file /tmp/tmps9xrzrwk.pyomo.lp
+Reading time = 0.00 seconds
+obj: 3 rows, 3 columns, 8 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 3 rows, 3 columns and 8 nonzeros (Min)
+Model fingerprint: 0x3afbec21
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 6e+00]
+  RHS range        [2e+02, 2e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 2 integer (0 binary)
+
+Root relaxation: objective -1.224237e+02, 4 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    -122.4237212 -122.42372  0.00%     -    0s
+
+Explored 1 nodes (4 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -122.424 1e+08 
+No other solutions better than -122.424
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.224237212158e+02, best bound -1.224237212158e+02, gap 0.0000%
+

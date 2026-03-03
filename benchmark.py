@@ -14,11 +14,15 @@ import traceback
 
 # example = "three_stage_dynamic_model_switching"
 # timelimit = 900
-# =================================================================================================
-from models.three_stage_dynamic_model_switching_ordering import build_model
 
-example = "three_stage_dynamic_model_switching"
-timelimit = 900
+
+# =================================================================================================
+# from models.three_stage_dynamic_model_switching_ordering import build_model
+
+# example = "three_stage_dynamic_model_switching"
+# timelimit = 900
+
+
 # =================================================================================================
 # from models.four_stage_dynamic_model_switching_nonlinear import build_model
 
@@ -30,31 +34,32 @@ timelimit = 900
 
 # example = "five_stage_dynamic_model_switching_nonlinear"
 # timelimit = 900
+
 # =================================================================================================
 # from models.six_stage_dynamic_model_switching_nonlinear import build_model
 
 # example = "six_stage_dynamic_model_switching_nonlinear"
 # timelimit = 900
 # =================================================================================================
-# from models.seven_stage_dynamic_model_switching_nonlinear import build_model
+from models.seven_stage_dynamic_model_switching_nonlinear import build_model
 
-# example = "seven_stage_dynamic_model_switching_nonlinear"
-# timelimit = 1800
+example = "seven_stage_dynamic_model_switching_nonlinear"
+timelimit = 3600
 # =================================================================================================
 # from models.eight_stage_dynamic_model_switching_nonlinear import build_model
 
 # example = "eight_stage_dynamic_model_switching_nonlinear"
-# timelimit = 1800
+# timelimit = 3600
 # =================================================================================================
 # from models.nine_stage_dynamic_model_switching_nonlinear import build_model
 
 # example = "nine_stage_dynamic_model_switching_nonlinear"
-# timelimit = 3600
+# timelimit = 7200
 # =================================================================================================
 # from models.ten_stage_dynamic_model_switching_nonlinear import build_model
 
 # example = "ten_stage_dynamic_model_switching_nonlinear"
-# timelimit = 3600
+# timelimit = 14400
 # =================================================================================================
 nfe = 30
 current_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
@@ -67,7 +72,7 @@ NLP_solvers = ['ipopt', 'conopt']
 subproblem_solvers = ['dicopt']
 
 strategy_list = [
-    'gdpopt.enumerate',
+    # 'gdpopt.enumerate',
     'gdpopt.ldsda',
     'gdpopt.ldbd',
 ]
@@ -223,19 +228,57 @@ for strategy in strategy_list:
                             'w',
                         ) as sys.stdout:
                             try:
-                                results = solver.solve(
-                                    model,
-                                    tee=True,
-                                    direction_norm=direction_norm,
-                                    subproblem_solver='gams',
-                                    subproblem_solver_args=dict(solver=NLP_solver),
-                                    starting_point=[1, 2],
-                                    logical_constraint_list=[
-                                        model.mode_transfer_lc1,
-                                        model.mode_transfer_lc2,
-                                    ],
-                                    time_limit=timelimit,
-                                )
+                                if strategy == 'gdpopt.ldsda':
+                                    results = solver.solve(
+                                        model,
+                                        tee=True,
+                                        direction_norm=direction_norm,
+                                        subproblem_solver='gams',
+                                        subproblem_solver_args=dict(solver=NLP_solver),
+                                        mip_solver=MIP_solver,
+                                        mip_solver_args={
+                                            "tee": True,                 
+                                            "keepfiles": True,           
+                                            "logfile": "gurobi_master.log",  
+                                            "symbolic_solver_labels": True,
+                                            "options": {                  
+                                                "Presolve": 0,           
+                                                "LogFile": "gurobi_native.log",
+                                            },
+                                        },
+                                        starting_point=[1, 2],
+                                        logical_constraint_list=[
+                                            model.mode_transfer_lc1,
+                                            model.mode_transfer_lc2,
+                                        ],
+                                        time_limit=timelimit,
+                                    )
+                                elif strategy == 'gdpopt.ldbd':
+                                    results = solver.solve(
+                                        model,
+                                        tee=True,
+                                        direction_norm=direction_norm,
+                                        subproblem_solver='gams',
+                                        subproblem_solver_args=dict(solver=NLP_solver),
+                                        mip_solver=MIP_solver,
+                                        mip_solver_args={
+                                            "tee": True,                 
+                                            "keepfiles": True,           
+                                            "logfile": "gurobi_master.log",  
+                                            "symbolic_solver_labels": True,
+                                            "options": {                  
+                                                "Presolve": 0,           
+                                                "LogFile": "gurobi_native.log",
+                                            },
+                                        },
+                                        separation_solver='gurobi',
+                                        starting_point=[1, 2],
+                                        logical_constraint_list=[
+                                            model.mode_transfer_lc1,
+                                            model.mode_transfer_lc2,
+                                        ],
+                                        time_limit=timelimit,
+                                    )
                                 print(results)
                             except Exception:
                                 traceback.print_exc()
@@ -337,16 +380,53 @@ for strategy in strategy_list:
                             'w',
                         ) as sys.stdout:
                             try:
-                                results = solver.solve(
-                                    model,
-                                    tee=True,
-                                    direction_norm=direction_norm,
-                                    subproblem_solver='gams',
-                                    subproblem_solver_args=dict(solver=NLP_solver),
-                                    starting_point=starting_point,
-                                    disjunction_list=disjunction_list,
-                                    time_limit=timelimit,
-                                )
+                                if strategy == 'gdpopt.ldsda':
+                                    # For gdpopt.ldsda, we need to provide a starting point and a list of disjunctions.
+                                    results = solver.solve(
+                                        model,
+                                        tee=True,
+                                        direction_norm=direction_norm,
+                                        subproblem_solver='gams',
+                                        subproblem_solver_args=dict(solver=NLP_solver),
+                                        mip_solver = MIP_solver,
+                                        mip_solver_args={
+                                            "tee": True,                 
+                                            "keepfiles": True,           
+                                            "logfile": "gurobi_master.log",  
+                                            "symbolic_solver_labels": True,
+                                            "options": {                  
+                                                "Presolve": 0,           
+                                                "LogFile": "gurobi_native.log",
+                                            },
+                                        },
+                                        starting_point=starting_point,
+                                        disjunction_list=disjunction_list,
+                                        time_limit=timelimit,
+                                    )
+                                elif strategy == 'gdpopt.ldbd':
+                                    # For gdpopt.ldbd, we need to provide a starting point and a list of disjunctions.
+                                    results = solver.solve(
+                                        model,
+                                        tee=True,
+                                        direction_norm=direction_norm,
+                                        subproblem_solver='gams',
+                                        subproblem_solver_args=dict(solver=NLP_solver),
+                                        mip_solver = MIP_solver,
+                                        separation_solver = 'gurobi',
+                                        mip_solver_args={
+                                            "tee": True,                 
+                                            "keepfiles": True,           
+                                            "logfile": "gurobi_master.log",  
+                                            "symbolic_solver_labels": True,
+                                            "options": {                  
+                                                "Presolve": 0,           
+                                                "LogFile": "gurobi_native.log",
+                                            },
+                                        },
+                                        starting_point=starting_point,
+                                        disjunction_list=disjunction_list,
+                                        time_limit=timelimit,
+                                    )
                                 print(results)
                             except Exception:
                                 traceback.print_exc()
