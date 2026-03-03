@@ -5,6 +5,7 @@ from glob import glob
 import json
 import seaborn as sns
 import numpy as np
+import os
 
 matplotlib.rcParams['pdf.fonttype'] = 42
 matplotlib.rcParams['ps.fonttype'] = 42
@@ -27,15 +28,15 @@ def read_data(file_folder):
     for f_name in glob(file_folder + '/*.json'):
         with open(f_name, 'r') as f:
             json_data = json.load(f)
-            if f_name.split('/')[-1].split('_')[0] == 'gdpopt.ldsda':
-                json_data['strategy'] = (
-                    f_name[:-5].split('/')[-1].split('_')[0]
-                    + '-'
-                    + f_name[:-5].split('/')[-1].split('_')[2]
-                )
+            base_name = os.path.basename(f_name)[:-5]
+            parts = base_name.split('_')
+            strategy = parts[0] if parts else '-'
+            solver = parts[1] if len(parts) > 1 else '-'
+            if strategy in ('gdpopt.ldsda', 'gdpopt.ldbd') and len(parts) > 2:
+                json_data['strategy'] = strategy + '-' + parts[2]
             else:
-                json_data['strategy'] = f_name[:-5].split('/')[-1].split('_')[0]
-            json_data['solver'] = f_name[:-5].split('/')[-1].split('_')[1]
+                json_data['strategy'] = strategy
+            json_data['solver'] = solver
             if isinstance(json_data['Problem'], list):
                 json_data['Problem'] = json_data['Problem'][0]
             if isinstance(json_data['Solver'], list):
@@ -108,12 +109,17 @@ strategy_maker_dict = {
     'gdpopt.gloa': "P",
     'gdpopt.ldsda-L2': "o",
     'gdpopt.ldsda-Linf': "s",
+    'gdpopt.ldbd-L2': "v",
+    'gdpopt.ldbd-Linf': "<",
     # 'gdpopt.lbb': color_palette[7],
 }
 
 fig, ax = plt.subplots()
-color_palette = sns.color_palette("Spectral", 8)
-solver_color_dict = {'baron': color_palette[0], 'knitro': color_palette[7]}
+solver_list = sorted(result['solver'].dropna().unique())
+color_palette = sns.color_palette("Spectral", max(len(solver_list), 3))
+solver_color_dict = {
+    solver: color_palette[idx] for idx, solver in enumerate(solver_list)
+}
 plt.xticks(ticks=[4, 5, 6, 7, 8, 9], labels=[4, 5, 6, 7, 8, 9])
 
 for strategy in strategy_maker_dict:
@@ -153,37 +159,47 @@ ax.legend(sorted_handles, sorted_labels, loc='upper center', ncol=3)
 
 # Sort the legend labels and handles
 GDPopt_handles, GDPopt_labels = [], []
-DSDA_handles, DSDA_labels = [], []
+LD_handles, LD_labels = [], []
 MINLP_handles, MINLP_labels = [], []
 Enum_handles, Enum_labels = [], []
 
+
+def format_solver_label(label):
+    if " - " in label:
+        prefix, solver = label.rsplit(" - ", 1)
+        return f"{prefix} - {solver.upper()}"
+    return label
+
 for handle, label in zip(*ax.get_legend_handles_labels()):
 
-    if 'gdpopt.ldsda' in label:
-        DSDA_handles.append(handle)
-        DSDA_labels.append(
-            label.replace('gdpopt.ldsda-', '')
-            .replace('baron', 'BARON')
-            .replace('knitro', 'KNITRO')
+    if 'gdpopt.ldsda' in label or 'gdpopt.ldbd' in label:
+        LD_handles.append(handle)
+        LD_labels.append(
+            format_solver_label(
+                label.replace('gdpopt.ldsda-', 'LDSDA ')
+                .replace('gdpopt.ldbd-', 'LDBD ')
+                .replace('gdpopt.ldsda', 'LDSDA')
+                .replace('gdpopt.ldbd', 'LDBD')
+            )
         )
     elif 'gdpopt.' in label:
         GDPopt_handles.append(handle)
         GDPopt_labels.append(
-            label.replace('gdpopt.', '')
-            .replace('enumerate', 'Enum')
-            .replace('gloa', 'GLOA')
-            .replace('loa', 'LOA')
-            .replace('baron', 'BARON')
-            .replace('knitro', 'KNITRO')
+            format_solver_label(
+                label.replace('gdpopt.', '')
+                .replace('enumerate', 'Enum')
+                .replace('gloa', 'GLOA')
+                .replace('loa', 'LOA')
+            )
         )
     elif 'gdp.' in label:
         MINLP_handles.append(handle)
         MINLP_labels.append(
-            label.replace('gdp.', '')
-            .replace('bigm', 'BigM')
-            .replace('hull', 'Hull')
-            .replace('baron', 'BARON')
-            .replace('knitro', 'KNITRO')
+            format_solver_label(
+                label.replace('gdp.', '')
+                .replace('bigm', 'BigM')
+                .replace('hull', 'Hull')
+            )
         )
 
 # Create custom legends
@@ -196,10 +212,10 @@ legend_GDPopt = ax.legend(
     fontsize=10,  #'small',
     ncol=1,
 )
-legend_DSDA = ax.legend(
-    DSDA_handles,
-    DSDA_labels,
-    title='LD-SDA',
+legend_LD = ax.legend(
+    LD_handles,
+    LD_labels,
+    title='LD Algorithms',
     loc='lower center',
     bbox_to_anchor=(1.22, 0.72),
     fontsize=10,  #'small',
@@ -217,7 +233,7 @@ legend_MINLP = ax.legend(
 
 plt.tight_layout()
 ax.add_artist(legend_GDPopt)
-ax.add_artist(legend_DSDA)
+ax.add_artist(legend_LD)
 ax.add_artist(legend_MINLP)
 
 plt.savefig('figures/computational_results_comparison.pdf')

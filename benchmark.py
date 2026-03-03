@@ -3,9 +3,11 @@ from pyomo.environ import *
 from pyomo.dae import *
 from pyomo.gdp import Disjunct
 import pyomo.contrib.gdpopt.enumerate
+
 from datetime import datetime
 import os
 import json
+import traceback
 
 # =================================================================================================
 # from models.three_stage_dynamic_model_switching import build_model
@@ -60,15 +62,12 @@ result_dir = 'results/' + example + '/' + 'nfe' + str(nfe) + '/' + current_time
 os.makedirs(result_dir, exist_ok=True)
 
 MIP_solver = 'gurobi'
-MINLP_solvers = ['dicopt', 'baron']
-NLP_solvers = ['ipopth', 'conopt', 'baron']
+MINLP_solvers = ['dicopt']
+NLP_solvers = ['ipopt', 'conopt']
+subproblem_solvers = ['dicopt']
 
 strategy_list = [
-    'gdp.bigm',
-    'gdp.hull',
     'gdpopt.enumerate',
-    'gdpopt.loa',
-    'gdpopt.gloa',
     'gdpopt.ldsda',
     'gdpopt.ldbd',
 ]
@@ -85,6 +84,7 @@ def get_and_discretize_model(mode_transfer=False):
     discretizer.apply_to(model, nfe=nfe, ncp=3, scheme='LAGRANGE-RADAU')
     # We need to reconstruct the constraints in disjuncts after discretization.
     # This is a bug in Pyomo.dae. https://github.com/Pyomo/pyomo/issues/3101
+    
     for disjunct in model.component_data_objects(ctype=Disjunct):
         for constraint in disjunct.component_objects(ctype=Constraint):
             constraint._constructed = False
@@ -138,24 +138,31 @@ for strategy in strategy_list:
             print('Benchmarking', strategy, NLP_solver)
             model = get_and_discretize_model()
             solver = SolverFactory(strategy)
+            results = None
             with open(
                 result_dir + '/' + strategy + '_' + NLP_solver + '.log', 'w'
             ) as sys.stdout:
-                results = solver.solve(
-                    model,
-                    tee=True,
-                    nlp_solver='gams',
-                    nlp_solver_args=dict(solver=NLP_solver),
-                    mip_solver=MIP_solver,
-                    time_limit=timelimit,
-                    keepfiles = True,
-                )
-                print(results)
+                try:
+                    results = solver.solve(
+                        model,
+                        tee=True,
+                        nlp_solver='gams',
+                        nlp_solver_args=dict(solver=NLP_solver),
+                        mip_solver=MIP_solver,
+                        time_limit=timelimit,
+                        # Ensure enumerate doesn't fall back to MINLP subproblems
+                        # due to unfixed discrete vars.
+                        force_subproblem_nlp=True,
+                    )
+                    print(results)
+                except Exception:
+                    traceback.print_exc()
             sys.stdout = stdout
-            with open(
-                result_dir + '/' + strategy + '_' + NLP_solver + '.json', 'w'
-            ) as f:
-                json.dump(results.json_repn(), f)
+            if results is not None:
+                with open(
+                    result_dir + '/' + strategy + '_' + NLP_solver + '.json', 'w'
+                ) as f:
+                    json.dump(results.json_repn(), f)
     elif strategy == 'gdpopt.lbb':
         for MINLP_solver in MINLP_solvers:
             # DICOPT does not work with gdpopt.lbb
@@ -180,18 +187,29 @@ for strategy in strategy_list:
                 result_dir + '/' + strategy + '_' + MINLP_solver + '.json', 'w'
             ) as f:
                 json.dump(results.json_repn(), f)
-    elif strategy in ['gdpopt.ldsda','gdpopt.ldbd']:
+    elif strategy in ['gdpopt.ldsda', 'gdpopt.ldbd']:
         for NLP_solver in NLP_solvers:
             print('Benchmarking', strategy, NLP_solver)
             mode_transfer_list = [False, True]
             direction_norm_list = ['L2', 'Linf']
             for mode_transfer in mode_transfer_list:
                 for direction_norm in direction_norm_list:
-                    model = get_and_discretize_model(mode_transfer)
+                    
+                    model = build_model(mode_transfer)
+                    # Discretize the model using dae.collocation
+                    discretizer = TransformationFactory('dae.collocation')
+                    discretizer.apply_to(model, nfe=nfe, ncp=3, scheme='LAGRANGE-RADAU')
+                    for dxdt in model.component_data_objects(ctype=Var, descend_into=True):
+                        if 'dxdt' in dxdt.name:
+                            dxdt.setlb(-300)
+                            dxdt.setub(300)
+                            
                     solver = SolverFactory(strategy)
+                    results = None
                     if mode_transfer:
                         if "three" in example:
                             continue
+                        mode_suffix = '_mode_transfer'
                         with open(
                             result_dir
                             + '/'
@@ -200,107 +218,111 @@ for strategy in strategy_list:
                             + NLP_solver
                             + '_'
                             + str(direction_norm)
-                            + '_mode_transfer'
+                            + mode_suffix
                             + '.log',
                             'w',
                         ) as sys.stdout:
-                            results = solver.solve(
-                                model,
-                                tee=True,
-                                direction_norm=direction_norm,
-                                minlp_solver='gams',
-                                minlp_solver_args=dict(solver=NLP_solver),
-                                starting_point=[1, 2],
-                                logical_constraint_list=[
-                                    model.mode_transfer_lc1.name,
-                                    model.mode_transfer_lc2.name,
-                                ],
-                                time_limit=timelimit,
-                            )
-                            print(results)
+                            try:
+                                results = solver.solve(
+                                    model,
+                                    tee=True,
+                                    direction_norm=direction_norm,
+                                    subproblem_solver='gams',
+                                    subproblem_solver_args=dict(solver=NLP_solver),
+                                    starting_point=[1, 2],
+                                    logical_constraint_list=[
+                                        model.mode_transfer_lc1,
+                                        model.mode_transfer_lc2,
+                                    ],
+                                    time_limit=timelimit,
+                                )
+                                print(results)
+                            except Exception:
+                                traceback.print_exc()
                     else:
+                        mode_suffix = ''
                         if 'three' in example:
                             disjunction_list = [
-                                model.d[1].name,
-                                model.d[2].name,
-                                model.d[3].name,
+                                model.d[1],
+                                model.d[2],
+                                model.d[3],
                             ]
                             starting_point = [1, 1, 1]
                         elif 'four' in example:
                             disjunction_list = [
-                                model.d[1].name,
-                                model.d[2].name,
-                                model.d[3].name,
-                                model.d[4].name,
+                                model.d[1],
+                                model.d[2],
+                                model.d[3],
+                                model.d[4],
                             ]
                             starting_point = [1, 2, 3, 3]
                         elif 'five' in example:
                             disjunction_list = [
-                                model.d[1].name,
-                                model.d[2].name,
-                                model.d[3].name,
-                                model.d[4].name,
-                                model.d[5].name,
+                                model.d[1],
+                                model.d[2],
+                                model.d[3],
+                                model.d[4],
+                                model.d[5],
                             ]
                             starting_point = [1, 2, 3, 3, 3]
                         elif 'six' in example:
                             disjunction_list = [
-                                model.d[1].name,
-                                model.d[2].name,
-                                model.d[3].name,
-                                model.d[4].name,
-                                model.d[5].name,
-                                model.d[6].name,
+                                model.d[1],
+                                model.d[2],
+                                model.d[3],
+                                model.d[4],
+                                model.d[5],
+                                model.d[6],
                             ]
                             starting_point = [1, 2, 3, 3, 3, 3]
                         elif 'seven' in example:
                             disjunction_list = [
-                                model.d[1].name,
-                                model.d[2].name,
-                                model.d[3].name,
-                                model.d[4].name,
-                                model.d[5].name,
-                                model.d[6].name,
-                                model.d[7].name,
+                                model.d[1],
+                                model.d[2],
+                                model.d[3],
+                                model.d[4],
+                                model.d[5],
+                                model.d[6],
+                                model.d[7],
                             ]
                             starting_point = [1, 2, 3, 3, 3, 3, 3]
                         elif 'eight' in example:
                             disjunction_list = [
-                                model.d[1].name,
-                                model.d[2].name,
-                                model.d[3].name,
-                                model.d[4].name,
-                                model.d[5].name,
-                                model.d[6].name,
-                                model.d[7].name,
-                                model.d[8].name,
+                                model.d[1],
+                                model.d[2],
+                                model.d[3],
+                                model.d[4],
+                                model.d[5],
+                                model.d[6],
+                                model.d[7],
+                                model.d[8],
                             ]
                             starting_point = [1, 2, 3, 3, 3, 3, 3, 3]
                         elif 'nine' in example:
                             disjunction_list = [
-                                model.d[1].name,
-                                model.d[2].name,
-                                model.d[3].name,
-                                model.d[4].name,
-                                model.d[5].name,
-                                model.d[6].name,
-                                model.d[7].name,
-                                model.d[8].name,
-                                model.d[9].name,
+                                model.d[1],
+                                model.d[2],
+                                model.d[3],
+                                model.d[4],
+                                model.d[5],
+                                model.d[6],
+                                model.d[7],
+                                model.d[8],
+                                model.d[9],
                             ]
                             starting_point = [1, 2, 3, 3, 3, 3, 3, 3, 3]
                         elif 'ten' in example:
                             disjunction_list = [
-                                model.d[1].name,
-                                model.d[2].name,
-                                model.d[3].name,
-                                model.d[4].name,
-                                model.d[5].name,
-                                model.d[6].name,
-                                model.d[7].name,
-                                model.d[8].name,
-                                model.d[9].name,
-                                model.d[10].name,
+                                model.d[1],
+                                model.d[2],
+                                model.d[3],
+                                model.d[4],
+                                model.d[5],
+                                model.d[6],
+                                model.d[7],
+                                model.d[8],
+                                model.d[9],
+                                model.d[10],
                             ]
                             starting_point = [1, 2, 3, 3, 3, 3, 3, 3, 3, 3]
                         with open(
@@ -314,27 +336,32 @@ for strategy in strategy_list:
                             + '.log',
                             'w',
                         ) as sys.stdout:
-                            results = solver.solve(
-                                model,
-                                tee=True,
-                                direction_norm=direction_norm,
-                                minlp_solver='gams',
-                                minlp_solver_args=dict(solver=NLP_solver),
-                                starting_point=starting_point,
-                                disjunction_list=disjunction_list,
-                                time_limit=timelimit,
-                            )
-                            print(results)
+                            try:
+                                results = solver.solve(
+                                    model,
+                                    tee=True,
+                                    direction_norm=direction_norm,
+                                    subproblem_solver='gams',
+                                    subproblem_solver_args=dict(solver=NLP_solver),
+                                    starting_point=starting_point,
+                                    disjunction_list=disjunction_list,
+                                    time_limit=timelimit,
+                                )
+                                print(results)
+                            except Exception:
+                                traceback.print_exc()
                     sys.stdout = stdout
-                    with open(
-                        result_dir
-                        + '/'
-                        + strategy
-                        + '_'
-                        + NLP_solver
-                        + '_'
-                        + str(direction_norm)
-                        + '.json',
-                        'w',
-                    ) as f:
-                        json.dump(results.json_repn(), f)
+                    if results is not None:
+                        with open(
+                            result_dir
+                            + '/'
+                            + strategy
+                            + '_'
+                            + NLP_solver
+                            + '_'
+                            + str(direction_norm)
+                            + mode_suffix
+                            + '.json',
+                            'w',
+                        ) as f:
+                            json.dump(results.json_repn(), f)

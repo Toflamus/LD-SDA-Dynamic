@@ -1,6 +1,7 @@
 import pandas as pd
 from glob import glob
 import json
+import os
 
 
 def pyomo_result_to_latex_table(json_file_folder, output_file_name='latex/results.tex'):
@@ -9,15 +10,15 @@ def pyomo_result_to_latex_table(json_file_folder, output_file_name='latex/result
         with open(f_name, 'r') as f:
             print(f_name)
             json_data = json.load(f)
-            if f_name.split('/')[-1].split('_')[0] == 'gdpopt.ldsda':
-                json_data['strategy'] = (
-                    f_name[:-5].split('/')[-1].split('_')[0]
-                    + '-'
-                    + f_name[:-5].split('/')[-1].split('_')[2]
-                )
+            base_name = os.path.basename(f_name)[:-5]
+            parts = base_name.split('_')
+            strategy = parts[0] if parts else '-'
+            solver = parts[1] if len(parts) > 1 else '-'
+            if strategy in ('gdpopt.ldsda', 'gdpopt.ldbd') and len(parts) > 2:
+                json_data['strategy'] = strategy + '-' + parts[2]
             else:
-                json_data['strategy'] = f_name[:-5].split('/')[-1].split('_')[0]
-            json_data['solver'] = f_name[:-5].split('/')[-1].split('_')[1]
+                json_data['strategy'] = strategy
+            json_data['solver'] = solver
             if isinstance(json_data['Problem'], list):
                 json_data['Problem'] = json_data['Problem'][0]
             if isinstance(json_data['Solver'], list):
@@ -33,14 +34,14 @@ def pyomo_result_to_latex_table(json_file_folder, output_file_name='latex/result
             'Solver.Termination condition',
         ]
     ]
-    result = result[(result['solver'] == 'knitro') | (result['solver'] == 'baron')]
+    result['solver'] = result['solver'].str.upper()
     result.replace(
         {
-            'knitro': 'KNITRO',
-            'baron': 'BARON',
             'gdpopt': 'GDPopt',
             'gdpopt.ldsda-L2': 'LDSDA $L_2$',
             'gdpopt.ldsda-Linf': 'LDSDA $L_\infty$',
+            'gdpopt.ldbd-L2': 'LDBD $L_2$',
+            'gdpopt.ldbd-Linf': 'LDBD $L_\infty$',
             'gdp.bigm': 'MINLP BigM',
             'gdp.hull': 'MINLP Hull',
             'gdpopt.enumerate': 'L-Enum',
