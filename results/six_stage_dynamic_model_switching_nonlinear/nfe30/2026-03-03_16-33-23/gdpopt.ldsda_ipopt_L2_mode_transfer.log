@@ -1,0 +1,90 @@
+Starting GDPopt version 22.5.13 using LDSDA algorithm
+iterlim: None
+time_limit: 900
+tee: true
+logger: <Logger pyomo.contrib.gdpopt (INFO)>
+mip_solver: gurobi
+mip_solver_args:
+  keepfiles: true
+  logfile: gurobi_master.log
+  options: {'Presolve': 0, 'LogFile': 'gurobi_native.log'}
+  symbolic_solver_labels: true
+  tee: true
+subproblem_solver: gams
+subproblem_solver_args:
+  solver: ipopt
+direction_norm: L2
+starting_point: [1, 2]
+logical_constraint_list: ComponentSet(['mode_transfer_lc1 (key=mode_transfer_lc1)', 'mode_transfer_lc2 (key=mode_transfer_lc2)'])
+disjunction_list: None
+infinity_output: 100000000.0
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+subproblem_initialization_method: <function restore_vars_to_original_values at 0x7f2e528b39c0>
+call_before_subproblem_solve: <class 'type'>
+call_after_subproblem_solve: <class 'type'>
+call_after_subproblem_feasible: <class 'type'>
+force_subproblem_nlp: false
+subproblem_presolve: true
+tighten_nlp_var_bounds: false
+round_discrete_vars: true
+max_fbbt_iterations: 3
+bound_tolerance: 1e-06
+
+If you use this software, you may cite the following:
+            - Implementation:
+            Chen, Q; Johnson, ES; Bernal, DE; Valentin, R; Kale, S;
+            Bates, J; Siirola, JD; Grossmann, IE.
+            Pyomo.GDP: an ecosystem for logic based modeling and optimization
+            development.
+            Optimization and Engineering, 2021.
+
+- LDSDA algorithm:
+        Bernal DE, Ovalle D, Liñán DA, Ricardez-Sandoval LA, Gómez JM, Grossmann IE.
+        Process Superstructure Optimization through Discrete Steepest Descent Optimization: a GDP Analysis and Applications in Process Intensification.
+        Computer Aided Chemical Engineering 2022 Jan 1 (Vol. 49, pp. 1279-1284). Elsevier.
+        https://doi.org/10.1016/B978-0-323-85159-6.50213-X
+Original model has 576 constraints (30 nonlinear) and 6 disjunctions, with 1113 variables, of which 15 are binary, 0 are integer, and 1098 are continuous.
+Reformulation Summary:
+  Index | Ext Var | LB | UB | Associated Boolean Vars
+      1 |       1 |  1 |  6 | mode_transfer[2,1], mode_transfer[3,1], mode_transfer[4,1], mode_transfer[5,1], mode_transfer[6,1], mode_transfer[7,1]
+      2 |       1 |  1 |  6 | mode_transfer[2,2], mode_transfer[3,2], mode_transfer[4,2], mode_transfer[5,2], mode_transfer[6,2], mode_transfer[7,2]
+=====================================================================================================
+Iteration |   Search Type   |  External Variables  | Lower Bound | Upper Bound |   Gap    | Time(s)
+
+        0     Initial point                 (1, 2)          -inf     -50.67925       inf%      8.64  *
+        1   Neighbor search                 (1, 3)          -inf     -55.98749       inf%     46.88  *
+        1       Line search                 (1, 4)          -inf     -70.41596       inf%    204.26  *
+        1       Line search                 (1, 5)          -inf    -122.42372       inf%    265.00  *
+        1       Line search                 (1, 6)          -inf    -122.42372       inf%    274.56  
+        2   Neighbor search                 (2, 5)          -inf    -122.42372       inf%    281.35  
+Search path: (1, 2) -> (1, 3) -> (1, 4) -> (1, 5)
+
+Solved in 2 iterations and 281.35354 seconds
+Optimal objective value -122.4237212356
+Relative optimality gap inf%
+
+Problem: 
+- Name: unknown
+  Lower bound: -.inf
+  Upper bound: -122.42372123564247
+  Number of objectives: 1
+  Number of constraints: 576
+  Number of variables: 1113
+  Number of binary variables: 15
+  Number of integer variables: 0
+  Number of continuous variables: 1098
+  Number of nonzeros: None
+  Sense: minimize
+  Number of disjunctions: 6
+Solver: 
+- Name: GDPopt (22, 5, 13) - LDSDA
+  Status: ok
+  User time: 281.3535039825365
+  Wallclock time: 281.3535039825365
+  Termination condition: locallyOptimal
+  Iterations: 2
+  Timing: main_timer_start_time: 4955554.586921816
+total: 281.3535039825365
+

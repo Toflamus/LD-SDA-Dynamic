@@ -1,0 +1,111 @@
+Starting GDPopt version 22.5.13 using LDSDA algorithm
+iterlim: None
+time_limit: 3600
+tee: true
+logger: <Logger pyomo.contrib.gdpopt (INFO)>
+mip_solver: gurobi
+mip_solver_args:
+  keepfiles: true
+  logfile: gurobi_master_gdpopt.ldsda_conopt_Linf.log
+  options: {'Presolve': 0, 'LogFile': 'gurobi_native.log', 'Threads': 1}
+  symbolic_solver_labels: true
+  tee: true
+subproblem_solver: gams
+subproblem_solver_args:
+  add_options: ['option threads=1;']
+  solver: conopt
+direction_norm: Linf
+starting_point: [1, 2, 3, 3, 3, 3, 3]
+logical_constraint_list: None
+disjunction_list: ComponentSet(['d[1] (key=d[1])', 'd[2] (key=d[2])', 'd[3] (key=d[3])', 'd[4] (key=d[4])', 'd[5] (key=d[5])', 'd[6] (key=d[6])', 'd[7] (key=d[7])'])
+infinity_output: 100000000.0
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+subproblem_initialization_method: <function restore_vars_to_original_values at 0x7f022cbef9c0>
+call_before_subproblem_solve: <class 'type'>
+call_after_subproblem_solve: <class 'type'>
+call_after_subproblem_feasible: <class 'type'>
+force_subproblem_nlp: false
+subproblem_presolve: true
+tighten_nlp_var_bounds: false
+round_discrete_vars: true
+max_fbbt_iterations: 3
+bound_tolerance: 1e-06
+
+If you use this software, you may cite the following:
+            - Implementation:
+            Chen, Q; Johnson, ES; Bernal, DE; Valentin, R; Kale, S;
+            Bates, J; Siirola, JD; Grossmann, IE.
+            Pyomo.GDP: an ecosystem for logic based modeling and optimization
+            development.
+            Optimization and Engineering, 2021.
+
+- LDSDA algorithm:
+        Bernal DE, Ovalle D, Liñán DA, Ricardez-Sandoval LA, Gómez JM, Grossmann IE.
+        Process Superstructure Optimization through Discrete Steepest Descent Optimization: a GDP Analysis and Applications in Process Intensification.
+        Computer Aided Chemical Engineering 2022 Jan 1 (Vol. 49, pp. 1279-1284). Elsevier.
+        https://doi.org/10.1016/B978-0-323-85159-6.50213-X
+Original model has 673 constraints (36 nonlinear) and 7 disjunctions, with 1299 variables, of which 18 are binary, 0 are integer, and 1281 are continuous.
+Reformulation Summary:
+  Index | Ext Var | LB | UB | Associated Boolean Vars
+      1 |       1 |  1 |  3 | stage_mode[1,1].indicator_var, stage_mode[1,2].indicator_var, stage_mode[1,3].indicator_var
+      2 |       1 |  1 |  3 | stage_mode[2,1].indicator_var, stage_mode[2,2].indicator_var, stage_mode[2,3].indicator_var
+      3 |       1 |  1 |  3 | stage_mode[3,1].indicator_var, stage_mode[3,2].indicator_var, stage_mode[3,3].indicator_var
+      4 |       1 |  1 |  3 | stage_mode[4,1].indicator_var, stage_mode[4,2].indicator_var, stage_mode[4,3].indicator_var
+      5 |       1 |  1 |  3 | stage_mode[5,1].indicator_var, stage_mode[5,2].indicator_var, stage_mode[5,3].indicator_var
+      6 |       1 |  1 |  3 | stage_mode[6,1].indicator_var, stage_mode[6,2].indicator_var, stage_mode[6,3].indicator_var
+      7 |       1 |  1 |  3 | stage_mode[7,1].indicator_var, stage_mode[7,2].indicator_var, stage_mode[7,3].indicator_var
+=====================================================================================================
+Iteration |   Search Type   |  External Variables  | Lower Bound | Upper Bound |   Gap    | Time(s)
+
+        0     Initial point   (1, 2, 3, 3, 3, 3, 3)          -inf     -78.03804       inf%      7.12  *
+        1   Neighbor search   (1, 1, 2, 2, 2, 2, 2)          -inf     -78.03804       inf%     19.01  
+        1   Neighbor search   (1, 1, 2, 2, 2, 2, 3)          -inf    -126.80258       inf%     31.77  *
+        1   Neighbor search   (1, 1, 2, 2, 2, 3, 3)          -inf    -126.80258       inf%     42.46  
+        1   Neighbor search   (1, 1, 2, 2, 3, 3, 3)          -inf    -126.80258       inf%     56.61  
+        1   Neighbor search   (1, 1, 2, 3, 3, 3, 3)          -inf    -126.80258       inf%     75.68  
+        1   Neighbor search   (1, 2, 2, 2, 2, 2, 2)          -inf    -126.80258       inf%    105.36  
+        1   Neighbor search   (1, 2, 2, 2, 2, 2, 3)          -inf    -133.31269       inf%    114.19  *
+        1   Neighbor search   (1, 2, 2, 2, 2, 3, 3)          -inf    -160.08149       inf%    125.37  *
+        1   Neighbor search   (1, 2, 2, 2, 3, 3, 3)          -inf    -160.08149       inf%    138.14  
+        1   Neighbor search   (1, 2, 2, 3, 3, 3, 3)          -inf    -160.08149       inf%    156.29  
+        1   Neighbor search   (2, 3, 3, 3, 3, 3, 3)          -inf    -160.08149       inf%    337.20  
+        2   Neighbor search   (1, 1, 1, 1, 1, 2, 2)          -inf    -160.08149       inf%    367.13  
+        2   Neighbor search   (1, 1, 1, 1, 1, 2, 3)          -inf    -160.08149       inf%    383.22  
+        2   Neighbor search   (1, 1, 1, 1, 2, 2, 2)          -inf    -160.08149       inf%    407.14  
+        2   Neighbor search   (1, 1, 1, 1, 2, 2, 3)          -inf    -160.08149       inf%    426.25  
+        2   Neighbor search   (1, 1, 1, 1, 2, 3, 3)          -inf    -160.08149       inf%    448.04  
+        2   Neighbor search   (1, 1, 1, 2, 2, 2, 2)          -inf    -160.08149       inf%    474.56  
+        2   Neighbor search   (1, 1, 1, 2, 2, 2, 3)          -inf    -160.08149       inf%    505.38  
+        2   Neighbor search   (1, 1, 1, 2, 2, 3, 3)          -inf    -160.08149       inf%    529.44  
+        2   Neighbor search   (1, 1, 1, 2, 3, 3, 3)          -inf    -160.08149       inf%    559.15  
+Search path: (1, 2, 3, 3, 3, 3, 3) -> (1, 2, 2, 2, 2, 3, 3)
+
+Solved in 2 iterations and 1090.23491 seconds
+Optimal objective value -160.0814911586
+Relative optimality gap inf%
+
+Problem: 
+- Name: unknown
+  Lower bound: -.inf
+  Upper bound: -160.08149115855005
+  Number of objectives: 1
+  Number of constraints: 673
+  Number of variables: 1299
+  Number of binary variables: 18
+  Number of integer variables: 0
+  Number of continuous variables: 1281
+  Number of nonzeros: None
+  Sense: minimize
+  Number of disjunctions: 7
+Solver: 
+- Name: GDPopt (22, 5, 13) - LDSDA
+  Status: ok
+  User time: 1090.2348670456558
+  Wallclock time: 1090.2348670456558
+  Termination condition: locallyOptimal
+  Iterations: 2
+  Timing: main_timer_start_time: 5052658.11881406
+total: 1090.2348670456558
+

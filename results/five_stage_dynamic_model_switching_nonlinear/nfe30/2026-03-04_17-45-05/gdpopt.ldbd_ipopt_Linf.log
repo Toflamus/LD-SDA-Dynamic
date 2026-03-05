@@ -1,0 +1,1390 @@
+Starting GDPopt version 22.5.13 using LDBD algorithm
+iterlim: None
+time_limit: 900
+tee: true
+logger: <Logger pyomo.contrib.gdpopt (INFO)>
+mip_solver: gurobi
+mip_solver_args:
+  keepfiles: true
+  logfile: gurobi_master_gdpopt.ldbd_ipopt_Linf.log
+  options: {'Presolve': 0, 'LogFile': 'gurobi_native.log', 'Threads': 1}
+  symbolic_solver_labels: true
+  tee: true
+subproblem_solver: gams
+subproblem_solver_args:
+  add_options: ['option threads=1;']
+  solver: ipopt
+direction_norm: Linf
+starting_point: [1, 2, 3, 3, 3]
+logical_constraint_list: None
+disjunction_list: ComponentSet(['d[1] (key=d[1])', 'd[2] (key=d[2])', 'd[3] (key=d[3])', 'd[4] (key=d[4])', 'd[5] (key=d[5])'])
+infinity_output: 100000000.0
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+subproblem_initialization_method: <function restore_vars_to_original_values at 0x7f6b12f6b9c0>
+call_before_subproblem_solve: <class 'type'>
+call_after_subproblem_solve: <class 'type'>
+call_after_subproblem_feasible: <class 'type'>
+force_subproblem_nlp: false
+subproblem_presolve: true
+tighten_nlp_var_bounds: false
+round_discrete_vars: true
+max_fbbt_iterations: 3
+bound_tolerance: 1e-06
+separation_solver: gurobi
+separation_solver_args:
+  keepfiles: true
+  logfile: gurobi_separation_gdpopt.ldbd_ipopt_Linf.log
+  options: {'Presolve': 0, 'LogFile': 'gurobi_native.log', 'Threads': 1}
+  symbolic_solver_labels: true
+  tee: true
+
+If you use this software, you may cite the following:
+            - Implementation:
+            Chen, Q; Johnson, ES; Bernal, DE; Valentin, R; Kale, S;
+            Bates, J; Siirola, JD; Grossmann, IE.
+            Pyomo.GDP: an ecosystem for logic based modeling and optimization
+            development.
+            Optimization and Engineering, 2021.
+
+Liñán, D. A.; Ricardez‐Sandoval, L. A. A Benders Decomposition Framework for the Optimization of Disjunctive Superstructures with Ordered Discrete Decisions. AIChE Journal 2023, 69 (5), e18008. https://doi.org/10.1002/aic.18008.
+Original model has 479 constraints (24 nonlinear) and 5 disjunctions, with 927 variables, of which 12 are binary, 0 are integer, and 915 are continuous.
+Reformulation Summary:
+  Index | Ext Var | LB | UB | Associated Boolean Vars
+      1 |       1 |  1 |  3 | stage_mode[1,1].indicator_var, stage_mode[1,2].indicator_var, stage_mode[1,3].indicator_var
+      2 |       1 |  1 |  3 | stage_mode[2,1].indicator_var, stage_mode[2,2].indicator_var, stage_mode[2,3].indicator_var
+      3 |       1 |  1 |  3 | stage_mode[3,1].indicator_var, stage_mode[3,2].indicator_var, stage_mode[3,3].indicator_var
+      4 |       1 |  1 |  3 | stage_mode[4,1].indicator_var, stage_mode[4,2].indicator_var, stage_mode[4,3].indicator_var
+      5 |       1 |  1 |  3 | stage_mode[5,1].indicator_var, stage_mode[5,2].indicator_var, stage_mode[5,3].indicator_var
+=====================================================================================================
+Iteration |   Search Type   |  External Variables  | Lower Bound | Upper Bound |   Gap    | Time(s)
+
+        0     Initial point        (1, 2, 3, 3, 3)          -inf     -32.85102       inf%      6.65  *
+        1    Skipped Anchor        (1, 2, 3, 3, 3)          -inf     -32.85102       inf%      6.66  
+        1          Neighbor        (1, 1, 2, 2, 2)          -inf     -32.85102       inf%     10.83  
+        1          Neighbor        (1, 1, 2, 2, 3)          -inf     -32.85102       inf%     14.90  
+        1          Neighbor        (1, 1, 2, 3, 3)          -inf     -32.85102       inf%     19.54  
+        1          Neighbor        (1, 2, 2, 2, 2)          -inf     -52.79223       inf%     32.55  *
+        1          Neighbor        (1, 2, 2, 2, 3)          -inf     -52.79223       inf%     42.18  
+        1          Neighbor        (1, 2, 2, 3, 3)          -inf     -52.79223       inf%     85.15  
+        1          Neighbor        (2, 3, 3, 3, 3)          -inf     -52.79223       inf%    132.24  
+Solver log file: 'gurobi_separation_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmpm8d48jmz.pyomo.lp',)
+Read LP format model from file /tmp/tmpm8d48jmz.pyomo.lp
+Reading time = 0.00 seconds
+obj: 48 rows, 6 columns, 288 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 48 rows, 6 columns and 288 nonzeros (Max)
+Model fingerprint: 0xb6b8a45b
+Model has 6 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 1e+08]
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+      14   -3.2851019e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 14 iterations and 0.00 seconds (0.00 work units)
+Optimal objective -3.285101914e+01
+Solver log file: 'gurobi_master_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmpbv7uli0z.pyomo.lp',)
+Read LP format model from file /tmp/tmpbv7uli0z.pyomo.lp
+Reading time = 0.00 seconds
+obj: 1 rows, 6 columns, 6 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 1 rows, 6 columns and 6 nonzeros (Min)
+Model fingerprint: 0x4e3547c8
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e-10, 5e+07]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [1e+08, 1e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -5.00000e+07
+Found heuristic solution: objective -1.50000e+08
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.500e+08 -1.500e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 96 available processors)
+
+Solution count 2: -1.5e+08 -5e+07 
+No other solutions better than -1.5e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.500000432793e+08, best bound -1.500000432793e+08, gap 0.0000%
+        1            Master        (1, 3, 1, 1, 1)   -150000043.27935     -52.79223   284132724.02%    132.27  
+        1         UB update        (1, 2, 2, 2, 2)   -150000043.27935     -52.79223   284132724.02%    132.27  
+Solver log file: 'gurobi_separation_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmpt0xazt69.pyomo.lp',)
+Read LP format model from file /tmp/tmpt0xazt69.pyomo.lp
+Reading time = 0.00 seconds
+obj: 49 rows, 6 columns, 294 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 49 rows, 6 columns and 294 nonzeros (Max)
+Model fingerprint: 0xcd0f75db
+Model has 6 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 1e+08]
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+      14   -3.2851019e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 14 iterations and 0.00 seconds (0.00 work units)
+Optimal objective -3.285101914e+01
+Solver log file: 'gurobi_separation_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmpbytx7vch.pyomo.lp',)
+Read LP format model from file /tmp/tmpbytx7vch.pyomo.lp
+Reading time = 0.00 seconds
+obj: 49 rows, 6 columns, 294 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 49 rows, 6 columns and 294 nonzeros (Max)
+Model fingerprint: 0x59294a9b
+Model has 6 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 1e+08]
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+      12    1.0000000e+08   0.000000e+00   0.000000e+00      0s
+
+Solved in 12 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.000000000e+08
+Solver log file: 'gurobi_master_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmpbnrsko_w.pyomo.lp',)
+Read LP format model from file /tmp/tmpbnrsko_w.pyomo.lp
+Reading time = 0.00 seconds
+obj: 2 rows, 6 columns, 9 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 2 rows, 6 columns and 9 nonzeros (Min)
+Model fingerprint: 0xc7182820
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e-10, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [1e+08, 1e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: objective -6.666673e+07, 2 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -6.667e+07    0    1 1.0000e+08 -6.667e+07   167%     -    0s
+H    0     0                    -5.00000e+07 -6.667e+07  33.3%     -    0s
+
+Explored 1 nodes (2 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 96 available processors)
+
+Solution count 2: -5e+07 1e+08 
+No other solutions better than -5e+07
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -5.000004605641e+07, best bound -5.000004605641e+07, gap 0.0000%
+        2            Master        (1, 3, 3, 1, 1)   -50000046.05641     -52.79223   94710901.25%    133.31  
+        2         UB update        (1, 2, 2, 2, 2)   -50000046.05641     -52.79223   94710901.25%    133.31  
+Solver log file: 'gurobi_separation_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmp8ehk68ps.pyomo.lp',)
+Read LP format model from file /tmp/tmp8ehk68ps.pyomo.lp
+Reading time = 0.00 seconds
+obj: 50 rows, 6 columns, 300 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 50 rows, 6 columns and 300 nonzeros (Max)
+Model fingerprint: 0xf75d1d13
+Model has 6 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 1e+08]
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+      15   -3.2851019e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 15 iterations and 0.00 seconds (0.00 work units)
+Optimal objective -3.285101917e+01
+Solver log file: 'gurobi_separation_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmpcn8a7ffj.pyomo.lp',)
+Read LP format model from file /tmp/tmpcn8a7ffj.pyomo.lp
+Reading time = 0.00 seconds
+obj: 50 rows, 6 columns, 300 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 50 rows, 6 columns and 300 nonzeros (Max)
+Model fingerprint: 0x56b8c517
+Model has 6 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 1e+08]
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+      11    1.0000000e+08   0.000000e+00   0.000000e+00      0s
+
+Solved in 11 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.000000000e+08
+Solver log file: 'gurobi_separation_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmpqfjl_zgg.pyomo.lp',)
+Read LP format model from file /tmp/tmpqfjl_zgg.pyomo.lp
+Reading time = 0.00 seconds
+obj: 50 rows, 6 columns, 300 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 50 rows, 6 columns and 300 nonzeros (Max)
+Model fingerprint: 0x5ac83f5d
+Model has 6 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 1e+08]
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+      10    1.0000000e+08   0.000000e+00   0.000000e+00      0s
+
+Solved in 10 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.000000000e+08
+Solver log file: 'gurobi_master_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmp68eslljy.pyomo.lp',)
+Read LP format model from file /tmp/tmp68eslljy.pyomo.lp
+Reading time = 0.00 seconds
+obj: 3 rows, 6 columns, 13 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 3 rows, 6 columns and 13 nonzeros (Min)
+Model fingerprint: 0x43b18dec
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e-08, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [4e+07, 1e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -1.00000e+08
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.000e+08 -1.000e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 96 available processors)
+
+Solution count 1: -1e+08 
+No other solutions better than -1e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.000001055845e+08, best bound -1.000001055845e+08, gap 0.0000%
+        3            Master        (1, 3, 1, 3, 3)   -100000105.58445     -52.79223   189421928.03%    134.17  
+        3         UB update        (1, 2, 2, 2, 2)   -100000105.58445     -52.79223   189421928.03%    134.17  
+Solver log file: 'gurobi_separation_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmpli7b7okx.pyomo.lp',)
+Read LP format model from file /tmp/tmpli7b7okx.pyomo.lp
+Reading time = 0.00 seconds
+obj: 51 rows, 6 columns, 306 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 51 rows, 6 columns and 306 nonzeros (Max)
+Model fingerprint: 0xfa79e3ef
+Model has 6 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 1e+08]
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+      15   -3.2851019e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 15 iterations and 0.00 seconds (0.00 work units)
+Optimal objective -3.285101917e+01
+Solver log file: 'gurobi_separation_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmpn79i0znr.pyomo.lp',)
+Read LP format model from file /tmp/tmpn79i0znr.pyomo.lp
+Reading time = 0.00 seconds
+obj: 51 rows, 6 columns, 306 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 51 rows, 6 columns and 306 nonzeros (Max)
+Model fingerprint: 0x72fd3af1
+Model has 6 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 1e+08]
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+      11    1.0000000e+08   0.000000e+00   0.000000e+00      0s
+
+Solved in 11 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.000000000e+08
+Solver log file: 'gurobi_separation_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmpdnphj1y_.pyomo.lp',)
+Read LP format model from file /tmp/tmpdnphj1y_.pyomo.lp
+Reading time = 0.00 seconds
+obj: 51 rows, 6 columns, 306 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 51 rows, 6 columns and 306 nonzeros (Max)
+Model fingerprint: 0x37d9fb80
+Model has 6 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 1e+08]
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+      10    1.0000000e+08   0.000000e+00   0.000000e+00      0s
+
+Solved in 10 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.000000000e+08
+Solver log file: 'gurobi_separation_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmpl26a5u1l.pyomo.lp',)
+Read LP format model from file /tmp/tmpl26a5u1l.pyomo.lp
+Reading time = 0.00 seconds
+obj: 51 rows, 6 columns, 306 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 51 rows, 6 columns and 306 nonzeros (Max)
+Model fingerprint: 0xe183e2aa
+Model has 6 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 1e+08]
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+      11    1.0000000e+08   0.000000e+00   0.000000e+00      0s
+
+Solved in 11 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.000000000e+08
+Solver log file: 'gurobi_master_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmpfg7i9uek.pyomo.lp',)
+Read LP format model from file /tmp/tmpfg7i9uek.pyomo.lp
+Reading time = 0.00 seconds
+obj: 4 rows, 6 columns, 16 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 4 rows, 6 columns and 16 nonzeros (Min)
+Model fingerprint: 0xcfd9d09c
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e-08, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [4e+07, 1e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: objective -5.555561e+07, 2 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -5.556e+07    0    1 1.0000e+08 -5.556e+07   156%     -    0s
+H    0     0                    -2.00000e+07 -5.556e+07   178%     -    0s
+
+Explored 1 nodes (2 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 96 available processors)
+
+Solution count 2: -2e+07 1e+08 
+No other solutions better than -2e+07
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -2.000003237643e+07, best bound -2.000003237643e+07, gap 0.0000%
+        4            Master        (1, 3, 3, 3, 1)   -20000032.37643     -52.79223   37884326.93%    135.04  
+        4         UB update        (1, 2, 2, 2, 2)   -20000032.37643     -52.79223   37884326.93%    135.04  
+Solver log file: 'gurobi_separation_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmp0gdbr31k.pyomo.lp',)
+Read LP format model from file /tmp/tmp0gdbr31k.pyomo.lp
+Reading time = 0.00 seconds
+obj: 52 rows, 6 columns, 312 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 52 rows, 6 columns and 312 nonzeros (Max)
+Model fingerprint: 0x155e975c
+Model has 6 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 1e+08]
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+      14   -3.2851019e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 14 iterations and 0.00 seconds (0.00 work units)
+Optimal objective -3.285101917e+01
+Solver log file: 'gurobi_separation_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmpev79zzze.pyomo.lp',)
+Read LP format model from file /tmp/tmpev79zzze.pyomo.lp
+Reading time = 0.00 seconds
+obj: 52 rows, 6 columns, 312 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 52 rows, 6 columns and 312 nonzeros (Max)
+Model fingerprint: 0x1d241c1b
+Model has 6 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 1e+08]
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+      11    1.0000000e+08   0.000000e+00   0.000000e+00      0s
+
+Solved in 11 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.000000000e+08
+Solver log file: 'gurobi_separation_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmp6_5m2rpi.pyomo.lp',)
+Read LP format model from file /tmp/tmp6_5m2rpi.pyomo.lp
+Reading time = 0.00 seconds
+obj: 52 rows, 6 columns, 312 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 52 rows, 6 columns and 312 nonzeros (Max)
+Model fingerprint: 0x6ec10e1e
+Model has 6 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 1e+08]
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+      13    1.0000000e+08   0.000000e+00   0.000000e+00      0s
+
+Solved in 13 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.000000000e+08
+Solver log file: 'gurobi_separation_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmpgw02_hlu.pyomo.lp',)
+Read LP format model from file /tmp/tmpgw02_hlu.pyomo.lp
+Reading time = 0.00 seconds
+obj: 52 rows, 6 columns, 312 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 52 rows, 6 columns and 312 nonzeros (Max)
+Model fingerprint: 0x047d57cc
+Model has 6 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 1e+08]
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+      12    1.0000000e+08   0.000000e+00   0.000000e+00      0s
+
+Solved in 12 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.000000000e+08
+Solver log file: 'gurobi_separation_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmp3r9y5f70.pyomo.lp',)
+Read LP format model from file /tmp/tmp3r9y5f70.pyomo.lp
+Reading time = 0.00 seconds
+obj: 52 rows, 6 columns, 312 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 52 rows, 6 columns and 312 nonzeros (Max)
+Model fingerprint: 0x6801b799
+Model has 6 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 1e+08]
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+      11    1.0000000e+08   0.000000e+00   0.000000e+00      0s
+
+Solved in 11 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.000000000e+08
+Solver log file: 'gurobi_master_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmp7fy4azkb.pyomo.lp',)
+Read LP format model from file /tmp/tmp7fy4azkb.pyomo.lp
+Reading time = 0.00 seconds
+obj: 5 rows, 6 columns, 22 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 5 rows, 6 columns and 22 nonzeros (Min)
+Model fingerprint: 0xf8ddab19
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [7e-09, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [4e+07, 2e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -1.00000e+08
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.000e+08 -1.000e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 96 available processors)
+
+Solution count 1: -1e+08 
+No other solutions better than -1e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.000001055845e+08, best bound -1.000001055845e+08, gap 0.0000%
+        5            Master        (1, 3, 1, 1, 3)   -100000105.58445     -52.79223   189421928.03%    136.03  
+        5         UB update        (1, 2, 2, 2, 2)   -100000105.58445     -52.79223   189421928.03%    136.03  
+Solver log file: 'gurobi_separation_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmpl6jt706a.pyomo.lp',)
+Read LP format model from file /tmp/tmpl6jt706a.pyomo.lp
+Reading time = 0.00 seconds
+obj: 53 rows, 6 columns, 318 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 53 rows, 6 columns and 318 nonzeros (Max)
+Model fingerprint: 0x77a01ffa
+Model has 6 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 1e+08]
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+      14   -3.2851019e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 14 iterations and 0.00 seconds (0.00 work units)
+Optimal objective -3.285101917e+01
+Solver log file: 'gurobi_separation_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmph_jcnvuu.pyomo.lp',)
+Read LP format model from file /tmp/tmph_jcnvuu.pyomo.lp
+Reading time = 0.00 seconds
+obj: 53 rows, 6 columns, 318 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 53 rows, 6 columns and 318 nonzeros (Max)
+Model fingerprint: 0xd8f063a9
+Model has 6 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 1e+08]
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+      11    1.0000000e+08   0.000000e+00   0.000000e+00      0s
+
+Solved in 11 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.000000000e+08
+Solver log file: 'gurobi_separation_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmp3b8g6neb.pyomo.lp',)
+Read LP format model from file /tmp/tmp3b8g6neb.pyomo.lp
+Reading time = 0.00 seconds
+obj: 53 rows, 6 columns, 318 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 53 rows, 6 columns and 318 nonzeros (Max)
+Model fingerprint: 0x5611aadb
+Model has 6 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 1e+08]
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+      13    1.0000000e+08   0.000000e+00   0.000000e+00      0s
+
+Solved in 13 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.000000000e+08
+Solver log file: 'gurobi_separation_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmpq2a43v_e.pyomo.lp',)
+Read LP format model from file /tmp/tmpq2a43v_e.pyomo.lp
+Reading time = 0.00 seconds
+obj: 53 rows, 6 columns, 318 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 53 rows, 6 columns and 318 nonzeros (Max)
+Model fingerprint: 0x5071fc33
+Model has 6 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 1e+08]
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+      12    1.0000000e+08   0.000000e+00   0.000000e+00      0s
+
+Solved in 12 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.000000000e+08
+Solver log file: 'gurobi_separation_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmpj9ep1zsq.pyomo.lp',)
+Read LP format model from file /tmp/tmpj9ep1zsq.pyomo.lp
+Reading time = 0.00 seconds
+obj: 53 rows, 6 columns, 318 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 53 rows, 6 columns and 318 nonzeros (Max)
+Model fingerprint: 0x0f6c6d5d
+Model has 6 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 1e+08]
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+      11    1.0000000e+08   0.000000e+00   0.000000e+00      0s
+
+Solved in 11 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.000000000e+08
+Solver log file: 'gurobi_separation_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmp1ejgjsq9.pyomo.lp',)
+Read LP format model from file /tmp/tmp1ejgjsq9.pyomo.lp
+Reading time = 0.00 seconds
+obj: 53 rows, 6 columns, 318 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 53 rows, 6 columns and 318 nonzeros (Max)
+Model fingerprint: 0x0ce2ec8b
+Model has 6 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 1e+08]
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+       9    1.0000000e+08   0.000000e+00   0.000000e+00      0s
+
+Solved in 9 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.000000000e+08
+Solver log file: 'gurobi_master_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmpjrqtl2r0.pyomo.lp',)
+Read LP format model from file /tmp/tmpjrqtl2r0.pyomo.lp
+Reading time = 0.00 seconds
+obj: 6 rows, 6 columns, 25 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 6 rows, 6 columns and 25 nonzeros (Min)
+Model fingerprint: 0xaaae788b
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [7e-09, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [4e+07, 2e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: objective -6.923083e+07, 4 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -6.923e+07    0    2 1.0000e+08 -6.923e+07   169%     -    0s
+H    0     0                    -2.00000e+07 -6.923e+07   246%     -    0s
+
+Explored 1 nodes (4 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 96 available processors)
+
+Solution count 2: -2e+07 1e+08 
+No other solutions better than -2e+07
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -2.000003237643e+07, best bound -2.000003237643e+07, gap 0.0000%
+        6            Master        (1, 3, 3, 3, 3)   -20000032.37643     -52.79223   37884326.93%    136.92  
+        6         UB update        (1, 2, 2, 2, 2)   -20000032.37643     -52.79223   37884326.93%    136.92  
+        6   Anchor (promoted)        (1, 3, 3, 3, 3)   -20000032.37643     -52.79223   37884326.93%    136.92  
+        7    Skipped Anchor        (1, 3, 3, 3, 3)   -20000032.37643     -52.79223   37884326.93%    136.92  
+Solver log file: 'gurobi_separation_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmp0fm70g1i.pyomo.lp',)
+Read LP format model from file /tmp/tmp0fm70g1i.pyomo.lp
+Reading time = 0.00 seconds
+obj: 53 rows, 6 columns, 318 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 53 rows, 6 columns and 318 nonzeros (Max)
+Model fingerprint: 0x77a01ffa
+Model has 6 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 1e+08]
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+      14   -3.2851019e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 14 iterations and 0.00 seconds (0.00 work units)
+Optimal objective -3.285101917e+01
+Solver log file: 'gurobi_separation_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmptr2usf5k.pyomo.lp',)
+Read LP format model from file /tmp/tmptr2usf5k.pyomo.lp
+Reading time = 0.00 seconds
+obj: 53 rows, 6 columns, 318 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 53 rows, 6 columns and 318 nonzeros (Max)
+Model fingerprint: 0xd8f063a9
+Model has 6 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 1e+08]
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+      11    1.0000000e+08   0.000000e+00   0.000000e+00      0s
+
+Solved in 11 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.000000000e+08
+Solver log file: 'gurobi_separation_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmpk4c6ryxt.pyomo.lp',)
+Read LP format model from file /tmp/tmpk4c6ryxt.pyomo.lp
+Reading time = 0.00 seconds
+obj: 53 rows, 6 columns, 318 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 53 rows, 6 columns and 318 nonzeros (Max)
+Model fingerprint: 0x5611aadb
+Model has 6 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 1e+08]
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+      13    1.0000000e+08   0.000000e+00   0.000000e+00      0s
+
+Solved in 13 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.000000000e+08
+Solver log file: 'gurobi_separation_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmpi8zpv13f.pyomo.lp',)
+Read LP format model from file /tmp/tmpi8zpv13f.pyomo.lp
+Reading time = 0.00 seconds
+obj: 53 rows, 6 columns, 318 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 53 rows, 6 columns and 318 nonzeros (Max)
+Model fingerprint: 0x5071fc33
+Model has 6 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 1e+08]
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+      12    1.0000000e+08   0.000000e+00   0.000000e+00      0s
+
+Solved in 12 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.000000000e+08
+Solver log file: 'gurobi_separation_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmp697sndfd.pyomo.lp',)
+Read LP format model from file /tmp/tmp697sndfd.pyomo.lp
+Reading time = 0.00 seconds
+obj: 53 rows, 6 columns, 318 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 53 rows, 6 columns and 318 nonzeros (Max)
+Model fingerprint: 0x0f6c6d5d
+Model has 6 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 1e+08]
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+      11    1.0000000e+08   0.000000e+00   0.000000e+00      0s
+
+Solved in 11 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.000000000e+08
+Solver log file: 'gurobi_separation_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmp5d6_224o.pyomo.lp',)
+Read LP format model from file /tmp/tmp5d6_224o.pyomo.lp
+Reading time = 0.00 seconds
+obj: 53 rows, 6 columns, 318 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 53 rows, 6 columns and 318 nonzeros (Max)
+Model fingerprint: 0x0ce2ec8b
+Model has 6 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 1e+08]
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+       9    1.0000000e+08   0.000000e+00   0.000000e+00      0s
+
+Solved in 9 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.000000000e+08
+Solver log file: 'gurobi_separation_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmpsfrg6llp.pyomo.lp',)
+Read LP format model from file /tmp/tmpsfrg6llp.pyomo.lp
+Reading time = 0.00 seconds
+obj: 53 rows, 6 columns, 318 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 53 rows, 6 columns and 318 nonzeros (Max)
+Model fingerprint: 0x3724e48b
+Model has 6 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 1e+08]
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+      13    1.0000000e+08   0.000000e+00   0.000000e+00      0s
+
+Solved in 13 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.000000000e+08
+Solver log file: 'gurobi_master_gdpopt.ldbd_ipopt_Linf.log'
+Solver problem files: ('/tmp/tmpvx3wvi5d.pyomo.lp',)
+Read LP format model from file /tmp/tmpvx3wvi5d.pyomo.lp
+Reading time = 0.00 seconds
+obj: 7 rows, 6 columns, 29 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 7 rows, 6 columns and 29 nonzeros (Min)
+Model fingerprint: 0x37c27a5f
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [7e-09, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [4e+07, 2e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: objective -5.714292e+07, 5 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -5.714e+07    0    3 1.0000e+08 -5.714e+07   157%     -    0s
+H    0     0                     -32.8510191 -5.714e+07      -     -    0s
+H    0     0                     -35.6105863 -5.714e+07      -     -    0s
+     0     0 -5.714e+07    0    3  -35.61059 -5.714e+07      -     -    0s
+H    0     0                     -35.6105864 -5.714e+07      -     -    0s
+H    0     0                     -52.7922262 -5.714e+07      -     -    0s
+H    0     0                     -52.7922262 -5.000e+07      -     -    0s
+     0     1 -5.000e+07    0    3  -52.79223 -5.000e+07      -     -    0s
+
+Explored 2 nodes (6 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 96 available processors)
+
+Solution count 4: -52.7922 -35.6106 -32.851 1e+08 
+No other solutions better than -52.7922
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -5.279222624004e+01, best bound -5.279222624004e+01, gap 0.0000%
+        7            Master        (1, 1, 2, 2, 3)     -52.79223     -52.79223      0.00%    136.99  
+        7         UB update        (1, 2, 2, 2, 2)     -52.79223     -52.79223      0.00%    136.99  
+        7   Anchor (promoted)        (1, 1, 2, 2, 3)     -52.79223     -52.79223      0.00%    136.99  
+LDBD bounds converged: UB=-52.79222624023559, LB=-52.79222624003887
+Search path: (1, 2, 3, 3, 3) -> (1, 3, 1, 1, 1) -> (1, 3, 3, 1, 1) -> (1, 3, 1, 3, 3) -> (1, 3, 3, 3, 1) -> (1, 3, 1, 1, 3) -> (1, 3, 3, 3, 3) -> (1, 1, 2, 2, 3)
+Anchor points: (1, 2, 3, 3, 3) -> (1, 3, 1, 1, 1) -> (1, 3, 3, 1, 1) -> (1, 3, 1, 3, 3) -> (1, 3, 3, 3, 1) -> (1, 3, 1, 1, 3) -> (1, 3, 3, 3, 3) -> (1, 1, 2, 2, 3)
+
+Solved in 7 iterations and 136.99945 seconds
+Optimal objective value -52.7922262402
+Relative optimality gap 0.00000%
+
+Problem: 
+- Name: unknown
+  Lower bound: -52.79222624003887
+  Upper bound: -52.79222624023559
+  Number of objectives: 1
+  Number of constraints: 479
+  Number of variables: 927
+  Number of binary variables: 12
+  Number of integer variables: 0
+  Number of continuous variables: 915
+  Number of nonzeros: None
+  Sense: minimize
+  Number of disjunctions: 5
+Solver: 
+- Name: GDPopt (22, 5, 13) - LDBD
+  Status: ok
+  User time: 136.99940513726324
+  Wallclock time: 136.99940513726324
+  Termination condition: optimal
+  Iterations: 7
+  Timing: main_timer_start_time: 5045790.53906929
+total: 136.99940513726324
+

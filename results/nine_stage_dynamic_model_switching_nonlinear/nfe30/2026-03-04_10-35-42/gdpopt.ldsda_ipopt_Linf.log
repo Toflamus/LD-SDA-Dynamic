@@ -1,0 +1,119 @@
+Starting GDPopt version 22.5.13 using LDSDA algorithm
+iterlim: None
+time_limit: 7200
+tee: true
+logger: <Logger pyomo.contrib.gdpopt (INFO)>
+mip_solver: gurobi
+mip_solver_args:
+  keepfiles: true
+  logfile: gurobi_master_gdpopt.ldsda_ipopt_Linf.log
+  options: {'Presolve': 0, 'LogFile': 'gurobi_native.log', 'Threads': 4}
+  symbolic_solver_labels: true
+  tee: true
+subproblem_solver: gams
+subproblem_solver_args:
+  add_options: ['option threads=4;']
+  solver: ipopt
+direction_norm: Linf
+starting_point: [1, 2, 3, 3, 3, 3, 3, 3, 3]
+logical_constraint_list: None
+disjunction_list: ComponentSet(['d[1] (key=d[1])', 'd[2] (key=d[2])', 'd[3] (key=d[3])', 'd[4] (key=d[4])', 'd[5] (key=d[5])', 'd[6] (key=d[6])', 'd[7] (key=d[7])', 'd[8] (key=d[8])', 'd[9] (key=d[9])'])
+infinity_output: 100000000.0
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+subproblem_initialization_method: <function restore_vars_to_original_values at 0x7fca409439c0>
+call_before_subproblem_solve: <class 'type'>
+call_after_subproblem_solve: <class 'type'>
+call_after_subproblem_feasible: <class 'type'>
+force_subproblem_nlp: false
+subproblem_presolve: true
+tighten_nlp_var_bounds: false
+round_discrete_vars: true
+max_fbbt_iterations: 3
+bound_tolerance: 1e-06
+
+If you use this software, you may cite the following:
+            - Implementation:
+            Chen, Q; Johnson, ES; Bernal, DE; Valentin, R; Kale, S;
+            Bates, J; Siirola, JD; Grossmann, IE.
+            Pyomo.GDP: an ecosystem for logic based modeling and optimization
+            development.
+            Optimization and Engineering, 2021.
+
+- LDSDA algorithm:
+        Bernal DE, Ovalle D, Liñán DA, Ricardez-Sandoval LA, Gómez JM, Grossmann IE.
+        Process Superstructure Optimization through Discrete Steepest Descent Optimization: a GDP Analysis and Applications in Process Intensification.
+        Computer Aided Chemical Engineering 2022 Jan 1 (Vol. 49, pp. 1279-1284). Elsevier.
+        https://doi.org/10.1016/B978-0-323-85159-6.50213-X
+Original model has 867 constraints (48 nonlinear) and 9 disjunctions, with 1671 variables, of which 24 are binary, 0 are integer, and 1647 are continuous.
+Reformulation Summary:
+  Index | Ext Var | LB | UB | Associated Boolean Vars
+      1 |       1 |  1 |  3 | stage_mode[1,1].indicator_var, stage_mode[1,2].indicator_var, stage_mode[1,3].indicator_var
+      2 |       1 |  1 |  3 | stage_mode[2,1].indicator_var, stage_mode[2,2].indicator_var, stage_mode[2,3].indicator_var
+      3 |       1 |  1 |  3 | stage_mode[3,1].indicator_var, stage_mode[3,2].indicator_var, stage_mode[3,3].indicator_var
+      4 |       1 |  1 |  3 | stage_mode[4,1].indicator_var, stage_mode[4,2].indicator_var, stage_mode[4,3].indicator_var
+      5 |       1 |  1 |  3 | stage_mode[5,1].indicator_var, stage_mode[5,2].indicator_var, stage_mode[5,3].indicator_var
+      6 |       1 |  1 |  3 | stage_mode[6,1].indicator_var, stage_mode[6,2].indicator_var, stage_mode[6,3].indicator_var
+      7 |       1 |  1 |  3 | stage_mode[7,1].indicator_var, stage_mode[7,2].indicator_var, stage_mode[7,3].indicator_var
+      8 |       1 |  1 |  3 | stage_mode[8,1].indicator_var, stage_mode[8,2].indicator_var, stage_mode[8,3].indicator_var
+      9 |       1 |  1 |  3 | stage_mode[9,1].indicator_var, stage_mode[9,2].indicator_var, stage_mode[9,3].indicator_var
+=====================================================================================================
+Iteration |   Search Type   |  External Variables  | Lower Bound | Upper Bound |   Gap    | Time(s)
+
+        0     Initial point   (1, 2, 3, 3, 3, 3, 3, 3, 3)          -inf    -197.14013       inf%     85.24  *
+        1   Neighbor search   (1, 1, 2, 2, 2, 2, 2, 2, 2)          -inf    -197.14013       inf%    900.39  
+        1   Neighbor search   (1, 1, 2, 2, 2, 2, 2, 2, 3)          -inf    -197.14013       inf%    990.71  
+        1   Neighbor search   (1, 1, 2, 2, 2, 2, 2, 3, 3)          -inf    -197.14013       inf%   1030.86  
+        1   Neighbor search   (1, 1, 2, 2, 2, 2, 3, 3, 3)          -inf    -197.14013       inf%   1045.39  
+        1   Neighbor search   (1, 1, 2, 2, 2, 3, 3, 3, 3)          -inf    -197.14013       inf%   1074.20  
+        1   Neighbor search   (1, 1, 2, 2, 3, 3, 3, 3, 3)          -inf    -197.14013       inf%   1274.83  
+        1   Neighbor search   (1, 1, 2, 3, 3, 3, 3, 3, 3)          -inf    -197.14013       inf%   1651.66  
+        1   Neighbor search   (1, 2, 2, 2, 2, 2, 2, 2, 2)          -inf    -197.14013       inf%   1791.11  
+        1   Neighbor search   (1, 2, 2, 2, 2, 2, 2, 2, 3)          -inf    -197.14013       inf%   1972.85  
+        1   Neighbor search   (1, 2, 2, 2, 2, 2, 2, 3, 3)          -inf    -197.14013       inf%   2074.51  
+        1   Neighbor search   (1, 2, 2, 2, 2, 2, 3, 3, 3)          -inf    -197.14013       inf%   2131.35  
+        1   Neighbor search   (1, 2, 2, 2, 2, 3, 3, 3, 3)          -inf    -207.62612       inf%   2186.04  *
+        1   Neighbor search   (1, 2, 2, 2, 3, 3, 3, 3, 3)          -inf    -212.00876       inf%   2339.22  *
+        1   Neighbor search   (1, 2, 2, 3, 3, 3, 3, 3, 3)          -inf    -212.00876       inf%   2589.02  
+        1   Neighbor search   (2, 3, 3, 3, 3, 3, 3, 3, 3)          -inf    -212.00876       inf%   3811.04  
+        2   Neighbor search   (1, 1, 1, 1, 2, 2, 2, 2, 2)          -inf    -212.00876       inf%   4377.60  
+        2   Neighbor search   (1, 1, 1, 1, 2, 2, 2, 2, 3)          -inf    -212.00876       inf%   4473.11  
+        2   Neighbor search   (1, 1, 1, 1, 2, 2, 2, 3, 3)          -inf    -212.00876       inf%   4503.70  
+        2   Neighbor search   (1, 1, 1, 1, 2, 2, 3, 3, 3)          -inf    -212.00876       inf%   4531.37  
+        2   Neighbor search   (1, 1, 1, 1, 2, 3, 3, 3, 3)          -inf    -212.00876       inf%   4700.61  
+        2   Neighbor search   (1, 1, 1, 2, 2, 2, 2, 2, 2)          -inf    -212.00876       inf%   4734.07  
+        2   Neighbor search   (1, 1, 1, 2, 2, 2, 2, 2, 3)          -inf    -212.00876       inf%   4745.47  
+        2   Neighbor search   (1, 1, 1, 2, 2, 2, 2, 3, 3)          -inf    -212.00876       inf%   4803.71  
+        2   Neighbor search   (1, 1, 1, 2, 2, 2, 3, 3, 3)          -inf    -212.00876       inf%   4829.50  
+        2   Neighbor search   (1, 1, 1, 2, 2, 3, 3, 3, 3)          -inf    -212.00876       inf%   4849.82  
+        2   Neighbor search   (1, 1, 1, 2, 3, 3, 3, 3, 3)          -inf    -212.00876       inf%   4887.56  
+Search path: (1, 2, 3, 3, 3, 3, 3, 3, 3) -> (1, 2, 2, 2, 3, 3, 3, 3, 3)
+
+Solved in 2 iterations and 6324.23768 seconds
+Optimal objective value -212.0087618376
+Relative optimality gap inf%
+
+Problem: 
+- Name: unknown
+  Lower bound: -.inf
+  Upper bound: -212.00876183763737
+  Number of objectives: 1
+  Number of constraints: 867
+  Number of variables: 1671
+  Number of binary variables: 24
+  Number of integer variables: 0
+  Number of continuous variables: 1647
+  Number of nonzeros: None
+  Sense: minimize
+  Number of disjunctions: 9
+Solver: 
+- Name: GDPopt (22, 5, 13) - LDSDA
+  Status: ok
+  User time: 6324.237636609934
+  Wallclock time: 6324.237636609934
+  Termination condition: locallyOptimal
+  Iterations: 2
+  Timing: main_timer_start_time: 5019449.29717907
+total: 6324.237636609934
+

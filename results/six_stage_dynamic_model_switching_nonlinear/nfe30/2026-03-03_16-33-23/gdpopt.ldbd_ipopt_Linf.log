@@ -1,0 +1,351 @@
+Starting GDPopt version 22.5.13 using LDBD algorithm
+iterlim: None
+time_limit: 900
+tee: true
+logger: <Logger pyomo.contrib.gdpopt (INFO)>
+mip_solver: gurobi
+mip_solver_args:
+  keepfiles: true
+  logfile: gurobi_master.log
+  options: {'Presolve': 0, 'LogFile': 'gurobi_native.log'}
+  symbolic_solver_labels: true
+  tee: true
+subproblem_solver: gams
+subproblem_solver_args:
+  solver: ipopt
+direction_norm: Linf
+starting_point: [1, 2, 3, 3, 3, 3]
+logical_constraint_list: None
+disjunction_list: ComponentSet(['d[1] (key=d[1])', 'd[2] (key=d[2])', 'd[3] (key=d[3])', 'd[4] (key=d[4])', 'd[5] (key=d[5])', 'd[6] (key=d[6])'])
+infinity_output: 100000000.0
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+subproblem_initialization_method: <function restore_vars_to_original_values at 0x7f2e528b39c0>
+call_before_subproblem_solve: <class 'type'>
+call_after_subproblem_solve: <class 'type'>
+call_after_subproblem_feasible: <class 'type'>
+force_subproblem_nlp: false
+subproblem_presolve: true
+tighten_nlp_var_bounds: false
+round_discrete_vars: true
+max_fbbt_iterations: 3
+bound_tolerance: 1e-06
+separation_solver: gurobi
+separation_solver_args:
+
+If you use this software, you may cite the following:
+            - Implementation:
+            Chen, Q; Johnson, ES; Bernal, DE; Valentin, R; Kale, S;
+            Bates, J; Siirola, JD; Grossmann, IE.
+            Pyomo.GDP: an ecosystem for logic based modeling and optimization
+            development.
+            Optimization and Engineering, 2021.
+
+Liñán, D. A.; Ricardez‐Sandoval, L. A. A Benders Decomposition Framework for the Optimization of Disjunctive Superstructures with Ordered Discrete Decisions. AIChE Journal 2023, 69 (5), e18008. https://doi.org/10.1002/aic.18008.
+Original model has 576 constraints (30 nonlinear) and 6 disjunctions, with 1113 variables, of which 15 are binary, 0 are integer, and 1098 are continuous.
+Reformulation Summary:
+  Index | Ext Var | LB | UB | Associated Boolean Vars
+      1 |       1 |  1 |  3 | stage_mode[1,1].indicator_var, stage_mode[1,2].indicator_var, stage_mode[1,3].indicator_var
+      2 |       1 |  1 |  3 | stage_mode[2,1].indicator_var, stage_mode[2,2].indicator_var, stage_mode[2,3].indicator_var
+      3 |       1 |  1 |  3 | stage_mode[3,1].indicator_var, stage_mode[3,2].indicator_var, stage_mode[3,3].indicator_var
+      4 |       1 |  1 |  3 | stage_mode[4,1].indicator_var, stage_mode[4,2].indicator_var, stage_mode[4,3].indicator_var
+      5 |       1 |  1 |  3 | stage_mode[5,1].indicator_var, stage_mode[5,2].indicator_var, stage_mode[5,3].indicator_var
+      6 |       1 |  1 |  3 | stage_mode[6,1].indicator_var, stage_mode[6,2].indicator_var, stage_mode[6,3].indicator_var
+=====================================================================================================
+Iteration |   Search Type   |  External Variables  | Lower Bound | Upper Bound |   Gap    | Time(s)
+
+        0     Initial point     (1, 2, 3, 3, 3, 3)          -inf     -50.67925       inf%     10.89  *
+        1    Skipped Anchor     (1, 2, 3, 3, 3, 3)          -inf     -50.67925       inf%     10.89  
+        1          Neighbor     (1, 1, 2, 2, 2, 2)          -inf     -56.58947       inf%     98.91  *
+        1          Neighbor     (1, 1, 2, 2, 2, 3)          -inf     -56.58947       inf%    105.62  
+        1          Neighbor     (1, 1, 2, 2, 3, 3)          -inf     -56.58947       inf%    241.12  
+        1          Neighbor     (1, 1, 2, 3, 3, 3)          -inf     -56.58947       inf%    286.72  
+        1          Neighbor     (1, 2, 2, 2, 2, 2)          -inf     -70.78653       inf%    305.45  *
+        1          Neighbor     (1, 2, 2, 2, 2, 3)          -inf    -122.42372       inf%    365.96  *
+        1          Neighbor     (1, 2, 2, 2, 3, 3)          -inf    -122.42372       inf%    510.01  
+        1          Neighbor     (1, 2, 2, 3, 3, 3)          -inf    -122.42372       inf%    552.66  
+        1          Neighbor     (2, 3, 3, 3, 3, 3)          -inf    -122.42372       inf%    633.10  
+Solver log file: 'gurobi_master.log'
+Solver problem files: ('/tmp/tmpk53yaz_m.pyomo.lp',)
+Read LP format model from file /tmp/tmpk53yaz_m.pyomo.lp
+Reading time = 0.00 seconds
+obj: 1 rows, 5 columns, 5 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 1 rows, 5 columns and 5 nonzeros (Min)
+Model fingerprint: 0xbcea6c8e
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 4 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [4e-09, 5e+07]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [1e+08, 1e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -5.00001e+07
+Found heuristic solution: objective -1.50000e+08
+Variable types: 1 continuous, 4 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.500e+08 -1.500e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -1.5e+08 -5.00001e+07 
+No other solutions better than -1.5e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.500000967332e+08, best bound -1.500000967332e+08, gap 0.0000%
+        1            Master     (1, 3, 1, 1, 1, 1)   -150000096.73323    -122.42372   122525253.11%    633.12  
+        1         UB update     (1, 2, 2, 2, 2, 3)   -150000096.73323    -122.42372   122525253.11%    633.12  
+Solver log file: 'gurobi_master.log'
+Solver problem files: ('/tmp/tmp8z8d2bse.pyomo.lp',)
+Read LP format model from file /tmp/tmp8z8d2bse.pyomo.lp
+Reading time = 0.00 seconds
+obj: 2 rows, 6 columns, 9 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 2 rows, 6 columns and 9 nonzeros (Min)
+Model fingerprint: 0x638be2e9
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 5 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [4e-09, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [1e+08, 1e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 9.999990e+07
+Variable types: 1 continuous, 5 integer (0 binary)
+
+Root relaxation: objective -6.666676e+07, 2 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -6.667e+07    0    1 1.0000e+08 -6.667e+07   167%     -    0s
+H    0     0                    -5.00001e+07 -6.667e+07  33.3%     -    0s
+
+Explored 1 nodes (2 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -5.00001e+07 9.99999e+07 
+No other solutions better than -5.00001e+07
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -5.000006209043e+07, best bound -5.000006209043e+07, gap 0.0000%
+        2            Master     (1, 3, 3, 1, 1, 3)   -50000062.09043    -122.42372   40841708.75%    634.18  
+        2         UB update     (1, 2, 2, 2, 2, 3)   -50000062.09043    -122.42372   40841708.75%    634.18  
+Solver log file: 'gurobi_master.log'
+Solver problem files: ('/tmp/tmpswjx094x.pyomo.lp',)
+Read LP format model from file /tmp/tmpswjx094x.pyomo.lp
+Reading time = 0.00 seconds
+obj: 3 rows, 7 columns, 12 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 3 rows, 7 columns and 12 nonzeros (Min)
+Model fingerprint: 0x4898fcfd
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 6 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e-09, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [1e+08, 1e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -1.00000e+08
+Variable types: 1 continuous, 6 integer (0 binary)
+
+Root relaxation: cutoff, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      -1.000e+08 -1.000e+08  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 1: -1e+08 
+No other solutions better than -1e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.000002448474e+08, best bound -1.000002448474e+08, gap 0.0000%
+        3            Master     (1, 3, 1, 3, 3, 3)   -100000244.84744    -122.42372   81683616.06%    635.25  
+        3         UB update     (1, 2, 2, 2, 2, 3)   -100000244.84744    -122.42372   81683616.06%    635.25  
+Solver log file: 'gurobi_master.log'
+Solver problem files: ('/tmp/tmpimevta2o.pyomo.lp',)
+Read LP format model from file /tmp/tmpimevta2o.pyomo.lp
+Reading time = 0.00 seconds
+obj: 4 rows, 7 columns, 19 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 4 rows, 7 columns and 19 nonzeros (Min)
+Model fingerprint: 0x8b117bd5
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 6 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e-09, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [1e+08, 1e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective 1.000000e+08
+Variable types: 1 continuous, 6 integer (0 binary)
+
+Root relaxation: objective -6.666676e+07, 5 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -6.667e+07    0    2 1.0000e+08 -6.667e+07   167%     -    0s
+H    0     0                    -5.00001e+07 -6.667e+07  33.3%     -    0s
+     0     0 -6.667e+07    0    2 -5.000e+07 -6.667e+07  33.3%     -    0s
+
+Explored 1 nodes (5 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 2: -5.00001e+07 1e+08 
+No other solutions better than -5.00001e+07
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -5.000006209043e+07, best bound -5.000006209043e+07, gap 0.0000%
+        4            Master     (1, 3, 3, 3, 3, 3)   -50000062.09043    -122.42372   40841708.75%    636.24  
+        4         UB update     (1, 2, 2, 2, 2, 3)   -50000062.09043    -122.42372   40841708.75%    636.24  
+        4   Anchor (promoted)     (1, 3, 3, 3, 3, 3)   -50000062.09043    -122.42372   40841708.75%    636.24  
+        5    Skipped Anchor     (1, 3, 3, 3, 3, 3)   -50000062.09043    -122.42372   40841708.75%    636.24  
+Solver log file: 'gurobi_master.log'
+Solver problem files: ('/tmp/tmpkh00xrfr.pyomo.lp',)
+Read LP format model from file /tmp/tmpkh00xrfr.pyomo.lp
+Reading time = 0.00 seconds
+obj: 5 rows, 7 columns, 24 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+
+Non-default parameters:
+Presolve  0
+
+Optimize a model with 5 rows, 7 columns and 24 nonzeros (Min)
+Model fingerprint: 0x0d72347c
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 6 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e-09, 1e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [1e+08, 1e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Variable types: 1 continuous, 6 integer (0 binary)
+Found heuristic solution: objective 1.000000e+08
+Found heuristic solution: objective 9.999996e+07
+Found heuristic solution: objective 9.999995e+07
+Found heuristic solution: objective 9.999990e+07
+
+Root relaxation: objective -2.500009e+07, 7 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -2.500e+07    0    4 1.0000e+08 -2.500e+07   125%     -    0s
+H    0     0                     -50.6792499 -2.500e+07      -     -    0s
+H    0     0                    -122.4237212 -2.500e+07      -     -    0s
+     0     0          -    0      -122.42372 -122.42372  0.00%     -    0s
+
+Explored 1 nodes (7 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 32 (of 96 available processors)
+
+Solution count 6: -122.424 -50.6792 9.99999e+07 ... 1e+08
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -1.224237212241e+02, best bound -1.224237219542e+02, gap 0.0000%
+        5            Master     (1, 2, 2, 2, 2, 3)    -122.42372    -122.42372      0.00%    636.28  
+        5         UB update     (1, 2, 2, 2, 2, 3)    -122.42372    -122.42372      0.00%    636.28  
+        5   Anchor (promoted)     (1, 2, 2, 2, 2, 3)    -122.42372    -122.42372      0.00%    636.28  
+LDBD bounds converged: UB=-122.42372123564247, LB=-122.4237212240696
+Search path: (1, 2, 3, 3, 3, 3) -> (1, 3, 1, 1, 1, 1) -> (1, 3, 3, 1, 1, 3) -> (1, 3, 1, 3, 3, 3) -> (1, 3, 3, 3, 3, 3) -> (1, 2, 2, 2, 2, 3)
+Anchor points: (1, 2, 3, 3, 3, 3) -> (1, 3, 1, 1, 1, 1) -> (1, 3, 3, 1, 1, 3) -> (1, 3, 1, 3, 3, 3) -> (1, 3, 3, 3, 3, 3) -> (1, 2, 2, 2, 2, 3)
+
+Solved in 5 iterations and 636.28913 seconds
+Optimal objective value -122.4237212356
+Relative optimality gap 0.00000%
+
+Problem: 
+- Name: unknown
+  Lower bound: -122.4237212240696
+  Upper bound: -122.42372123564247
+  Number of objectives: 1
+  Number of constraints: 576
+  Number of variables: 1113
+  Number of binary variables: 15
+  Number of integer variables: 0
+  Number of continuous variables: 1098
+  Number of nonzeros: None
+  Sense: minimize
+  Number of disjunctions: 6
+Solver: 
+- Name: GDPopt (22, 5, 13) - LDBD
+  Status: ok
+  User time: 636.2890868140385
+  Wallclock time: 636.2890868140385
+  Termination condition: optimal
+  Iterations: 5
+  Timing: main_timer_start_time: 4957138.79178251
+total: 636.2890868140385
+
