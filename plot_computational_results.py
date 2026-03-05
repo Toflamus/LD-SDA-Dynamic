@@ -81,7 +81,7 @@ def read_data(file_folder):
 
 
 optimal_objective_value = {
-    4: -398.135275, # Updated from -23.304689 based on result file ????????
+    4: -23.3046896, # Updated from -23.304689 based on result file ????????
     5: -52.79223,
     6: -122.423721,
     7: -160.08149,
