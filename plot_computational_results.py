@@ -14,12 +14,12 @@ plt.rcParams['xtick.labelsize'] = 12  # For x tick labels
 plt.rcParams['ytick.labelsize'] = 12  # For y tick labels
 
 json_file_folder_dict = {
-    4: 'results/four_stage_dynamic_model_switching_nonlinear/nfe30/2024-02-25_14-19-02',
-    5: 'results/five_stage_dynamic_model_switching_nonlinear/nfe30/2024-02-26_00-17-16',
-    6: 'results/six_stage_dynamic_model_switching_nonlinear/nfe30/2024-02-25_14-19-26',
-    7: 'results/seven_stage_dynamic_model_switching_nonlinear/nfe30/2024-02-26_00-17-55',
-    8: 'results/eight_stage_dynamic_model_switching_nonlinear/nfe30/2024-02-25_14-19-39',
-    9: 'results/nine_stage_dynamic_model_switching_nonlinear/nfe30/2024-02-26_00-19-35',
+    4: '/home/atom/a/wang7617/SECQUOIA/Pyomos/LD-SDA-Dynamic/results/four_stage_dynamic_model_switching_nonlinear/nfe30/2026-03-04_17-44-27',
+    5: '/home/atom/a/wang7617/SECQUOIA/Pyomos/LD-SDA-Dynamic/results/five_stage_dynamic_model_switching_nonlinear/nfe30/2026-03-04_17-45-05',
+    6: '/home/atom/a/wang7617/SECQUOIA/Pyomos/LD-SDA-Dynamic/results/six_stage_dynamic_model_switching_nonlinear/nfe30/2026-03-04_17-46-07',
+    7: '/home/atom/a/wang7617/SECQUOIA/Pyomos/LD-SDA-Dynamic/results/seven_stage_dynamic_model_switching_nonlinear/nfe30/2026-03-04_18-54-27',
+    8: '/home/atom/a/wang7617/SECQUOIA/Pyomos/LD-SDA-Dynamic/results/eight_stage_dynamic_model_switching_nonlinear/nfe30/2026-03-04_18-54-51',
+    9: '/home/atom/a/wang7617/SECQUOIA/Pyomos/LD-SDA-Dynamic/results/nine_stage_dynamic_model_switching_nonlinear/nfe30/2026-03-04_18-55-10',
 }
 
 
@@ -32,10 +32,19 @@ def read_data(file_folder):
             parts = base_name.split('_')
             strategy = parts[0] if parts else '-'
             solver = parts[1] if len(parts) > 1 else '-'
+            
+            is_transfer = 'mode_transfer' in base_name
+
             if strategy in ('gdpopt.ldsda', 'gdpopt.ldbd') and len(parts) > 2:
-                json_data['strategy'] = strategy + '-' + parts[2]
+                # strategy + '-' + L2/Linf
+                s_name = strategy + '-' + parts[2]
             else:
-                json_data['strategy'] = strategy
+                s_name = strategy
+            
+            if is_transfer:
+                s_name += '-Transfer'
+            
+            json_data['strategy'] = s_name
             json_data['solver'] = solver
             if isinstance(json_data['Problem'], list):
                 json_data['Problem'] = json_data['Problem'][0]
@@ -43,6 +52,11 @@ def read_data(file_folder):
                 json_data['Solver'] = json_data['Solver'][0]
             data.append(json_data)
     df = pd.json_normalize(data)
+    if df.empty:
+        return pd.DataFrame(columns=[
+            'strategy', 'solver', 'Lower bound', 'Upper bound', 'Time', 'Termination condition'
+        ])
+
     result = df[
         [
             'strategy',
@@ -67,7 +81,7 @@ def read_data(file_folder):
 
 
 optimal_objective_value = {
-    4: -23.304689,
+    4: -398.135275, # Updated from -23.304689 based on result file ????????
     5: -52.79223,
     6: -122.423721,
     7: -160.08149,
@@ -114,16 +128,37 @@ strategy_maker_dict = {
     # 'gdpopt.lbb': color_palette[7],
 }
 
-fig, ax = plt.subplots()
+# Increase figure size to accommodate legends at the bottom
+fig, ax = plt.subplots(figsize=(10, 6))
 solver_list = sorted(result['solver'].dropna().unique())
-color_palette = sns.color_palette("Spectral", max(len(solver_list), 3))
-solver_color_dict = {
-    solver: color_palette[idx] for idx, solver in enumerate(solver_list)
-}
+
+# Ensure we have enough colors
+if len(solver_list) > 0:
+    # Use 'deep', 'bright', or 'colorblind' for better visibility instead of 'Spectral'
+    # 'tab10' is also a good default for distinct categorical colors
+    color_palette = sns.color_palette("tab10", max(len(solver_list), 3))
+    solver_color_dict = {
+        solver: color_palette[idx] for idx, solver in enumerate(solver_list)
+    }
+else:
+    solver_color_dict = {}
+
 plt.xticks(ticks=[4, 5, 6, 7, 8, 9], labels=[4, 5, 6, 7, 8, 9])
 
-for strategy in strategy_maker_dict:
-    maker = strategy_maker_dict[strategy]
+# Get all unique strategies present in the data
+unique_strategies = result['strategy'].unique()
+
+for strategy in unique_strategies:
+    # Determine base strategy (remove -Transfer suffix) for maker lookup
+    base_strategy = strategy.replace('-Transfer', '')
+    
+    # Skip if strategy is unknown (not in our dict)
+    if base_strategy not in strategy_maker_dict:
+        continue
+        
+    maker = strategy_maker_dict[base_strategy]
+    is_transfer = '-Transfer' in strategy
+    
     for solver in solver_color_dict:
         color = solver_color_dict[solver]
         subset = result[
@@ -134,28 +169,35 @@ for strategy in strategy_maker_dict:
                 < abs(result['Optimal objective value']) * 0.001
             )
         ]
+        
+        if subset.empty:
+            continue
+            
+        # Distinguish Transfer: e.g., using hollow markers or different alpha
+        # Here using 'none' for facecolor to make hollow markers for Transfer
+        face_color = 'none' if is_transfer else color
+        label_suffix = " (Transfer)" if is_transfer else ""
+        
         plt.plot(
             subset['Stage'],
             subset['Time'],
             label=f'{strategy} - {solver}',
-            mec='black',
+            mec=color if is_transfer else 'black', # Edge color same as solver color for transfer, else black
+            mfc=face_color,
             marker=maker,
             linestyle='',
             color=color,
             markersize=8,
-            markeredgewidth=0.5,
+            markeredgewidth=1.5 if is_transfer else 0.5, # Thicker edge for hollow markers
             alpha=0.9,
         )
 plt.xlabel('Number of Stages')
 plt.ylabel("Solution Time [s]\n(within 0.1% of known optimal value)")
 plt.yscale('log')
 
-handles, labels = ax.get_legend_handles_labels()
-sorted_indices = np.argsort(labels)
-sorted_handles = [handles[idx] for idx in sorted_indices]
-sorted_labels = [labels[idx] for idx in sorted_indices]
-ax.legend(sorted_handles, sorted_labels, loc='upper center', ncol=3)
-
+# Remove any default legend first (we will build custom ones)
+if ax.get_legend():
+    ax.get_legend().remove()
 
 # Sort the legend labels and handles
 GDPopt_handles, GDPopt_labels = [], []
@@ -170,7 +212,18 @@ def format_solver_label(label):
         return f"{prefix} - {solver.upper()}"
     return label
 
-for handle, label in zip(*ax.get_legend_handles_labels()):
+# We need to collect ALL handles and labels first. 
+# get_legend_handles_labels may return only what's currently in the legend if ax.legend() was called, 
+# or all artists with labels if not. Since we removed the legend previously, ensure we get everything.
+handles, labels = ax.get_legend_handles_labels()
+
+# Sort handles and labels alphabetically to ensure consistent order
+if labels:
+    sorted_indices = np.argsort(labels)
+    handles = [handles[i] for i in sorted_indices]
+    labels = [labels[i] for i in sorted_indices]
+
+for handle, label in zip(handles, labels):
 
     if 'gdpopt.ldsda' in label or 'gdpopt.ldbd' in label:
         LD_handles.append(handle)
@@ -202,38 +255,47 @@ for handle, label in zip(*ax.get_legend_handles_labels()):
             )
         )
 
-# Create custom legends
-legend_GDPopt = ax.legend(
-    GDPopt_handles,
-    GDPopt_labels,
-    title='GDPOpt',
-    loc='lower center',
-    bbox_to_anchor=(1.24, 0.05),
-    fontsize=10,  #'small',
-    ncol=1,
-)
-legend_LD = ax.legend(
-    LD_handles,
-    LD_labels,
-    title='LD Algorithms',
-    loc='lower center',
-    bbox_to_anchor=(1.22, 0.72),
-    fontsize=10,  #'small',
-    ncol=1,
-)
-legend_MINLP = ax.legend(
-    MINLP_handles,
-    MINLP_labels,
-    title='MINLP',
-    loc='lower center',
-    bbox_to_anchor=(1.23, 0.45),
-    fontsize=10,  #'small',
-    ncol=1,
-)
+# Create custom legends placed to the right of the plot area
+# Adjust subplot params to leave space at the right for legends
+plt.subplots_adjust(right=0.75)
 
-plt.tight_layout()
-ax.add_artist(legend_GDPopt)
-ax.add_artist(legend_LD)
-ax.add_artist(legend_MINLP)
+# Prepare legends to add
+legends_to_add = []
+if LD_handles:
+    legends_to_add.append((LD_handles, LD_labels, "LD Algorithms"))
+if GDPopt_handles:
+    legends_to_add.append((GDPopt_handles, GDPopt_labels, "GDPOpt"))
+if MINLP_handles:
+    legends_to_add.append((MINLP_handles, MINLP_labels, "MINLP"))
 
-plt.savefig('figures/computational_results_comparison.pdf')
+# Shrink the plot area to make space on the right (20% reduction in width)
+box = ax.get_position()
+ax.set_position([box.x0, box.y0, box.width * 0.8, box.height])
+
+extra_artists = []
+# Distribute legends vertically on the right side
+num_legs = len(legends_to_add)
+if num_legs > 0:
+    for i, (leg_handles, leg_labels, title) in enumerate(legends_to_add):
+        # Calculate vertical position.
+        # We want to distribute them evenly along the vertical axis.
+        # i=0 (top) -> near 1.0, i=last (bottom) -> near 0.0
+        
+        y_anchor = 1.0 - (i + 0.5) / num_legs
+        
+        leg = ax.legend(
+            leg_handles,
+            leg_labels,
+            title=title,
+            loc='center left', 
+            bbox_to_anchor=(1.05, y_anchor), # Place outside to the right (slightly further)
+            fontsize=10, 
+            ncol=1,
+            frameon=True,
+            title_fontsize=11
+        )
+        ax.add_artist(leg)
+        extra_artists.append(leg)
+
+# Pass the extra artists so bbox_inches='tight' includes them
+plt.savefig('figures/computational_results_comparison.pdf', bbox_inches='tight', bbox_extra_artists=extra_artists)

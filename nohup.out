@@ -1,43 +1,24 @@
-Traceback (most recent call last):
-  File "/home/atom/a/wang7617/SECQUOIA/Pyomos/LD-SDA-Dynamic/benchmark.py", line 385, in <module>
-    results = solver.solve(
-              ^^^^^^^^^^^^^
-  File "/home/atom/a/wang7617/SECQUOIA/Pyomos/pyomo/pyomo/contrib/gdpopt/ldsda.py", line 70, in solve
-    return super().solve(model, **kwds)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/atom/a/wang7617/SECQUOIA/Pyomos/pyomo/pyomo/contrib/gdpopt/algorithm_base_class.py", line 130, in solve
-    self._solve_gdp(model, config)
-  File "/home/atom/a/wang7617/SECQUOIA/Pyomos/pyomo/pyomo/contrib/gdpopt/ldsda.py", line 145, in _solve_gdp
-    locally_optimal = self.neighbor_search(config)
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/atom/a/wang7617/SECQUOIA/Pyomos/pyomo/pyomo/contrib/gdpopt/ldsda.py", line 222, in neighbor_search
-    primal_improved, primal_bound = self._solve_discrete_point(
-                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/atom/a/wang7617/SECQUOIA/Pyomos/pyomo/pyomo/contrib/gdpopt/discrete_algorithm_base_class.py", line 623, in _solve_discrete_point
-    primal_improved, primal_bound = self._solve_GDP_subproblem(
-                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/atom/a/wang7617/SECQUOIA/Pyomos/pyomo/pyomo/contrib/gdpopt/discrete_algorithm_base_class.py", line 823, in _solve_GDP_subproblem
-    sub_results = configure_and_call_solver(
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/atom/a/wang7617/SECQUOIA/Pyomos/pyomo/pyomo/contrib/gdpopt/solve_subproblem.py", line 48, in configure_and_call_solver
-    results = opt.solve(model, **solver_args)
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/atom/a/wang7617/SECQUOIA/Pyomos/pyomo/pyomo/solvers/plugins/solvers/GAMS.py", line 921, in solve
-    result = subprocess.run(command, stdout=t.STDOUT, stderr=t.STDERR)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/atom/a/wang7617/miniconda3/envs/pyomo_ldbd/lib/python3.12/subprocess.py", line 550, in run
-    stdout, stderr = process.communicate(input, timeout=timeout)
-                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/atom/a/wang7617/miniconda3/envs/pyomo_ldbd/lib/python3.12/subprocess.py", line 1201, in communicate
-    self.wait()
-  File "/home/atom/a/wang7617/miniconda3/envs/pyomo_ldbd/lib/python3.12/subprocess.py", line 1264, in wait
-    return self._wait(timeout=timeout)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/atom/a/wang7617/miniconda3/envs/pyomo_ldbd/lib/python3.12/subprocess.py", line 2053, in _wait
-    (pid, sts) = self._try_wait(0)
-                 ^^^^^^^^^^^^^^^^^
-  File "/home/atom/a/wang7617/miniconda3/envs/pyomo_ldbd/lib/python3.12/subprocess.py", line 2011, in _try_wait
-    (pid, sts) = os.waitpid(self.pid, wait_flags)
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-KeyboardInterrupt
 Benchmarking gdpopt.ldsda ipopt
+Benchmarking gdpopt.ldsda conopt
+Benchmarking gdpopt.ldbd ipopt
+Benchmarking gdpopt.ldbd conopt
+Benchmarking gdpopt.ldsda ipopt
+Benchmarking gdpopt.ldsda conopt
+Benchmarking gdpopt.ldbd ipopt
+Benchmarking gdpopt.ldbd conopt
+Benchmarking gdpopt.ldsda ipopt
+Benchmarking gdpopt.ldsda conopt
+Benchmarking gdpopt.ldbd ipopt
+Benchmarking gdpopt.ldbd conopt
+Benchmarking gdpopt.ldsda ipopt
+Benchmarking gdpopt.ldsda conopt
+Benchmarking gdpopt.ldbd ipopt
+Benchmarking gdpopt.ldbd conopt
+Benchmarking gdpopt.ldsda ipopt
+Benchmarking gdpopt.ldsda conopt
+Benchmarking gdpopt.ldbd ipopt
+Benchmarking gdpopt.ldbd conopt
+Benchmarking gdpopt.ldsda ipopt
+Benchmarking gdpopt.ldsda conopt
+Benchmarking gdpopt.ldbd ipopt
+Benchmarking gdpopt.ldbd conopt

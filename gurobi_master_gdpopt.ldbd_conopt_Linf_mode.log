@@ -1,17 +1,19 @@
 Solver command line: []
 
-Read LP format model from file /tmp/tmpppkto4p4.pyomo.lp
+Read LP format model from file /tmp/tmpeoem0wi2.pyomo.lp
 Reading time = 0.00 seconds
 obj: 4 rows, 3 columns, 12 nonzeros
 Set parameter Presolve to value 0
 Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
 Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
 
 CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
-Thread count: 48 physical cores, 96 logical processors, using up to 32 threads
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
 
 Non-default parameters:
 Presolve  0
+Threads  1
 
 Optimize a model with 4 rows, 3 columns and 12 nonzeros (Min)
 Model fingerprint: 0x568c4c8b
@@ -34,7 +36,7 @@ Root relaxation: objective -1.884495e+02, 2 iterations, 0.00 seconds (0.00 work 
 *    0     0               0    -188.4494934 -188.44949  0.00%     -    0s
 
 Explored 1 nodes (2 simplex iterations) in 0.00 seconds (0.00 work units)
-Thread count was 32 (of 96 available processors)
+Thread count was 1 (of 96 available processors)
 
 Solution count 2: -188.449 -89.8155 
 No other solutions better than -188.449

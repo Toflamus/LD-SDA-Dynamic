@@ -1,0 +1,55 @@
+Solver command line: []
+
+Read LP format model from file /tmp/tmp8jaxkwok.pyomo.lp
+Reading time = 0.00 seconds
+obj: 12 rows, 10 columns, 119 nonzeros
+Set parameter Presolve to value 0
+Set parameter LogFile to value "gurobi_native.log"
+Set parameter Threads to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Oracle Linux Server 9.7")
+
+CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+
+Non-default parameters:
+Presolve  0
+Threads  1
+
+Optimize a model with 12 rows, 10 columns and 119 nonzeros (Min)
+Model fingerprint: 0xef17d0c8
+Model has 1 linear objective coefficients
+Variable types: 1 continuous, 9 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [5e-01, 6e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+00]
+  RHS range        [2e+08, 4e+08]
+Warning: Model contains large matrix coefficients
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+
+Found heuristic solution: objective -28.5967391
+Variable types: 1 continuous, 9 integer (0 binary)
+
+Root relaxation: objective -9.711569e+07, 8 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -9.712e+07    0    5  -28.59674 -9.712e+07      -     -    0s
+H    0     0                     -28.5967392 -9.712e+07      -     -    0s
+     0     0 -9.712e+07    0    5  -28.59674 -9.712e+07      -     -    0s
+H    0     0                     -31.6793736 -9.712e+07      -     -    0s
+H    0     0                     -34.5484919 -9.712e+07      -     -    0s
+     0     2 -7.793e+07    0    5  -34.54849 -7.793e+07      -     -    0s
+*    2     2               2     -37.9697030 -6.276e+07      -   3.5    0s
+
+Explored 18 nodes (37 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 96 available processors)
+
+Solution count 5: -37.9697 -34.5485 -31.6794 ... -28.5967
+No other solutions better than -37.9697
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -3.796970302275e+01, best bound -3.796970302275e+01, gap 0.0000%
+

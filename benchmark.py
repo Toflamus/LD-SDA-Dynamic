@@ -41,30 +41,42 @@ import traceback
 # example = "six_stage_dynamic_model_switching_nonlinear"
 # timelimit = 900
 # =================================================================================================
-from models.seven_stage_dynamic_model_switching_nonlinear import build_model
+# from models.seven_stage_dynamic_model_switching_nonlinear import build_model
 
-example = "seven_stage_dynamic_model_switching_nonlinear"
-timelimit = 3600
+# example = "seven_stage_dynamic_model_switching_nonlinear"
+# timelimit = 3600
 # =================================================================================================
 # from models.eight_stage_dynamic_model_switching_nonlinear import build_model
 
 # example = "eight_stage_dynamic_model_switching_nonlinear"
 # timelimit = 3600
-# =================================================================================================
-# from models.nine_stage_dynamic_model_switching_nonlinear import build_model
+# # =================================================================================================
+from models.nine_stage_dynamic_model_switching_nonlinear import build_model
 
-# example = "nine_stage_dynamic_model_switching_nonlinear"
-# timelimit = 7200
+example = "nine_stage_dynamic_model_switching_nonlinear"
+timelimit = 7200
 # =================================================================================================
 # from models.ten_stage_dynamic_model_switching_nonlinear import build_model
 
 # example = "ten_stage_dynamic_model_switching_nonlinear"
 # timelimit = 14400
 # =================================================================================================
+
+
+
 nfe = 30
 current_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
 result_dir = 'results/' + example + '/' + 'nfe' + str(nfe) + '/' + current_time
 os.makedirs(result_dir, exist_ok=True)
+
+# Control solver parallelism via env var, default to 1 thread.
+SOLVER_THREADS = int(os.getenv("LD_BENCH_THREADS", "1"))
+
+# Set OpenMP/BLAS/MKL threads to avoid oversubscription by underlying linear algebra libs
+os.environ["OMP_NUM_THREADS"] = str(SOLVER_THREADS)
+os.environ["MKL_NUM_THREADS"] = str(SOLVER_THREADS)
+os.environ["NUMEXPR_NUM_THREADS"] = str(SOLVER_THREADS)
+os.environ["OPENBLAS_NUM_THREADS"] = str(SOLVER_THREADS)
 
 MIP_solver = 'gurobi'
 MINLP_solvers = ['dicopt']
@@ -78,6 +90,26 @@ strategy_list = [
 ]
 
 json_result = {}
+
+
+def gurobi_mip_args(logfile_name):
+    """Reusable Gurobi args with consistent logging and threads."""
+    return {
+        "tee": True,
+        "keepfiles": True,
+        "logfile": logfile_name,
+        "symbolic_solver_labels": True,
+        "options": {
+            "Presolve": 0,
+            "LogFile": "gurobi_native.log",
+            "Threads": SOLVER_THREADS,
+        },
+    }
+
+
+def gams_threads_option():
+    """GAMS option string to set thread count for solvers that honor it."""
+    return f"option threads={SOLVER_THREADS};"
 
 
 def get_and_discretize_model(mode_transfer=False):
@@ -118,7 +150,10 @@ for strategy in strategy_list:
                 result_dir + '/' + strategy + '_' + MINLP_solver + '.log', 'w'
             ) as sys.stdout:
                 solver = SolverFactory("gams")
-                add_options = ['option reslim=' + str(timelimit) + ';']
+                add_options = [
+                    'option reslim=' + str(timelimit) + ';',
+                    gams_threads_option(),
+                ]
                 if MINLP_solver == 'dicopt':
                     add_options.append('GAMS_MODEL.optfile=1')
                     add_options.append('$onecho > dicopt.opt')
@@ -152,8 +187,14 @@ for strategy in strategy_list:
                         model,
                         tee=True,
                         nlp_solver='gams',
-                        nlp_solver_args=dict(solver=NLP_solver),
+                        nlp_solver_args=dict(
+                            solver=NLP_solver,
+                            add_options=[gams_threads_option()],
+                        ),
                         mip_solver=MIP_solver,
+                        mip_solver_args=gurobi_mip_args(
+                            f"gurobi_master_{strategy}_{NLP_solver}.log"
+                        ),
                         time_limit=timelimit,
                         # Ensure enumerate doesn't fall back to MINLP subproblems
                         # due to unfixed discrete vars.
@@ -183,7 +224,10 @@ for strategy in strategy_list:
                     model,
                     tee=True,
                     minlp_solver='gams',
-                    minlp_solver_args=dict(solver=MINLP_solver),
+                    minlp_solver_args=dict(
+                        solver=MINLP_solver,
+                        add_options=[gams_threads_option()],
+                    ),
                     time_limit=timelimit,
                 )
                 print(results)
@@ -234,18 +278,14 @@ for strategy in strategy_list:
                                         tee=True,
                                         direction_norm=direction_norm,
                                         subproblem_solver='gams',
-                                        subproblem_solver_args=dict(solver=NLP_solver),
+                                        subproblem_solver_args=dict(
+                                            solver=NLP_solver,
+                                            add_options=[gams_threads_option()],
+                                        ),
                                         mip_solver=MIP_solver,
-                                        mip_solver_args={
-                                            "tee": True,                 
-                                            "keepfiles": True,           
-                                            "logfile": "gurobi_master.log",  
-                                            "symbolic_solver_labels": True,
-                                            "options": {                  
-                                                "Presolve": 0,           
-                                                "LogFile": "gurobi_native.log",
-                                            },
-                                        },
+                                        mip_solver_args=gurobi_mip_args(
+                                            f"gurobi_master_{strategy}_{NLP_solver}_{direction_norm}_mode.log"
+                                        ),
                                         starting_point=[1, 2],
                                         logical_constraint_list=[
                                             model.mode_transfer_lc1,
@@ -259,19 +299,18 @@ for strategy in strategy_list:
                                         tee=True,
                                         direction_norm=direction_norm,
                                         subproblem_solver='gams',
-                                        subproblem_solver_args=dict(solver=NLP_solver),
+                                        subproblem_solver_args=dict(
+                                            solver=NLP_solver,
+                                            add_options=[gams_threads_option()],
+                                        ),
                                         mip_solver=MIP_solver,
-                                        mip_solver_args={
-                                            "tee": True,                 
-                                            "keepfiles": True,           
-                                            "logfile": "gurobi_master.log",  
-                                            "symbolic_solver_labels": True,
-                                            "options": {                  
-                                                "Presolve": 0,           
-                                                "LogFile": "gurobi_native.log",
-                                            },
-                                        },
+                                        mip_solver_args=gurobi_mip_args(
+                                            f"gurobi_master_{strategy}_{NLP_solver}_{direction_norm}_mode.log"
+                                        ),
                                         separation_solver='gurobi',
+                                        separation_solver_args=gurobi_mip_args(
+                                            f"gurobi_separation_{strategy}_{NLP_solver}_{direction_norm}_mode.log"
+                                        ),
                                         starting_point=[1, 2],
                                         logical_constraint_list=[
                                             model.mode_transfer_lc1,
@@ -387,18 +426,14 @@ for strategy in strategy_list:
                                         tee=True,
                                         direction_norm=direction_norm,
                                         subproblem_solver='gams',
-                                        subproblem_solver_args=dict(solver=NLP_solver),
+                                        subproblem_solver_args=dict(
+                                            solver=NLP_solver,
+                                            add_options=[gams_threads_option()],
+                                        ),
                                         mip_solver = MIP_solver,
-                                        mip_solver_args={
-                                            "tee": True,                 
-                                            "keepfiles": True,           
-                                            "logfile": "gurobi_master.log",  
-                                            "symbolic_solver_labels": True,
-                                            "options": {                  
-                                                "Presolve": 0,           
-                                                "LogFile": "gurobi_native.log",
-                                            },
-                                        },
+                                        mip_solver_args=gurobi_mip_args(
+                                            f"gurobi_master_{strategy}_{NLP_solver}_{direction_norm}.log"
+                                        ),
                                         starting_point=starting_point,
                                         disjunction_list=disjunction_list,
                                         time_limit=timelimit,
@@ -410,19 +445,18 @@ for strategy in strategy_list:
                                         tee=True,
                                         direction_norm=direction_norm,
                                         subproblem_solver='gams',
-                                        subproblem_solver_args=dict(solver=NLP_solver),
+                                        subproblem_solver_args=dict(
+                                            solver=NLP_solver,
+                                            add_options=[gams_threads_option()],
+                                        ),
                                         mip_solver = MIP_solver,
                                         separation_solver = 'gurobi',
-                                        mip_solver_args={
-                                            "tee": True,                 
-                                            "keepfiles": True,           
-                                            "logfile": "gurobi_master.log",  
-                                            "symbolic_solver_labels": True,
-                                            "options": {                  
-                                                "Presolve": 0,           
-                                                "LogFile": "gurobi_native.log",
-                                            },
-                                        },
+                                        mip_solver_args=gurobi_mip_args(
+                                            f"gurobi_master_{strategy}_{NLP_solver}_{direction_norm}.log"
+                                        ),
+                                        separation_solver_args=gurobi_mip_args(
+                                            f"gurobi_separation_{strategy}_{NLP_solver}_{direction_norm}.log"
+                                        ),
                                         starting_point=starting_point,
                                         disjunction_list=disjunction_list,
                                         time_limit=timelimit,
