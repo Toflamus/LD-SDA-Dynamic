@@ -1,0 +1,5 @@
+Algorithm,Subsolver,Norm,Model,Lower Bound,Upper Bound,Gap (%),Time (s),Iterations,Status,Termination
+bigm,baron,Unknown,Standard,-104.9770,-12.7415,723.90%,-,-,ok,optimal
+bigm,dicopt,Unknown,Standard,-81.1795,-12.7413,537.14%,-,-,ok,optimal
+hull,baron,Unknown,Standard,-40.4810,-12.7415,217.71%,-,-,ok,optimal
+hull,dicopt,Unknown,Standard,-9.1775,-9.1775,0.00%,-,-,ok,optimal

@@ -1,0 +1,27 @@
+Algorithm,Subsolver,Norm,Model,Lower Bound,Upper Bound,Gap (%),Time (s),Iterations,Status,Termination
+bigm,baron,Unknown,Standard,-581.2135,-188.4495,208.42%,-,-,ok,optimal
+bigm,dicopt,Unknown,Standard,-82.5697,-82.5697,0.00%,-,-,ok,optimal
+bigm,knitro,Unknown,Standard,-188.4495,-188.4495,0.00%,-,-,ok,optimal
+enumerate,baron,Unknown,Standard,-inf,-25.3602,inf,1800.26,1,ok,maxTimeLimit
+enumerate,conopt,Unknown,Standard,-188.4495,-188.4495,0.00%,953.04,6561,ok,optimal
+enumerate,ipopth,Unknown,Standard,-188.4495,-188.4495,0.00%,949.50,6561,ok,optimal
+enumerate,knitro,Unknown,Standard,-188.4495,-188.4495,0.00%,957.91,6561,ok,optimal
+gloa,baron,Unknown,Standard,-800.0000,-165.5627,383.20%,1837.72,1,ok,maxTimeLimit
+gloa,conopt,Unknown,Standard,-165.5627,-165.5627,0.00%,38.46,2,ok,optimal
+gloa,ipopth,Unknown,Standard,-165.5627,-165.5627,0.00%,44.00,3,ok,optimal
+gloa,knitro,Unknown,Standard,-165.5627,-165.5627,0.00%,44.85,3,ok,optimal
+hull,baron,Unknown,Standard,-531.8042,-142.1201,274.19%,-,-,ok,optimal
+hull,dicopt,Unknown,Standard,-63.0637,-63.0637,0.00%,-,-,ok,optimal
+hull,knitro,Unknown,Standard,-,-208.7202,nan%,-,-,ok,infeasible
+ldsda,baron,L2,Standard,-inf,-122.6935,inf,1800.63,1,ok,maxTimeLimit
+ldsda,baron,Linf,Standard,-inf,-122.6935,inf,1800.77,1,ok,maxTimeLimit
+ldsda,conopt,L2,Standard,-inf,-188.4495,inf,6.07,2,ok,unknown
+ldsda,conopt,Linf,Standard,-inf,-188.4495,inf,8.72,2,ok,unknown
+ldsda,ipopth,L2,Standard,-inf,-188.4495,inf,6.96,2,ok,unknown
+ldsda,ipopth,Linf,Standard,-inf,-188.4495,inf,9.65,2,ok,unknown
+ldsda,knitro,L2,Standard,-inf,-188.4495,inf,6.55,2,ok,unknown
+ldsda,knitro,Linf,Standard,-inf,-188.4495,inf,9.21,2,ok,unknown
+loa,baron,Unknown,Standard,-800.0000,-188.4495,324.52%,1833.97,1,ok,maxTimeLimit
+loa,conopt,Unknown,Standard,-188.4495,-188.4495,0.00%,189.49,22,ok,optimal
+loa,ipopth,Unknown,Standard,-188.4495,-188.4495,0.00%,188.49,22,ok,optimal
+loa,knitro,Unknown,Standard,-188.4495,-188.4495,0.00%,189.42,22,ok,optimal

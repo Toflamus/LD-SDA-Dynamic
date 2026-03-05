@@ -1,0 +1,2 @@
+Algorithm,Subsolver,Norm,Model,Lower Bound,Upper Bound,Gap (%),Time (s),Iterations,Status,Termination
+ldsda,ipopt,L2,Standard,-inf,-212.0088,inf,1770.48,3,ok,locallyOptimal

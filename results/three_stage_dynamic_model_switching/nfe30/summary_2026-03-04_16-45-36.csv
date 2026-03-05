@@ -1,0 +1,9 @@
+File,Algorithm,Subsolver,Norm,Lower Bound,Objective,Status,Time (s),Iterations,Termination
+gdpopt.ldbd_conopt_L2.json,ldbd,conopt,L2,-12.741461917757988,-12.741461921937825,ok,35.05368125066161,2,optimal
+gdpopt.ldbd_conopt_Linf.json,ldbd,conopt,Linf,-12.74146193265915,-12.741461921937825,ok,41.2409210735932,1,optimal
+gdpopt.ldbd_ipopt_L2.json,ldbd,ipopt,L2,-12.74146193265915,-12.741461920909707,ok,13.482552859000862,2,optimal
+gdpopt.ldbd_ipopt_Linf.json,ldbd,ipopt,Linf,-12.741461917757988,-12.741461920909707,ok,18.545499062165618,1,optimal
+gdpopt.ldsda_conopt_L2.json,ldsda,conopt,L2,-inf,-12.741461921937825,ok,37.35537965595722,3,locallyOptimal
+gdpopt.ldsda_conopt_Linf.json,ldsda,conopt,Linf,-inf,-12.741461921937825,ok,40.31048682704568,2,locallyOptimal
+gdpopt.ldsda_ipopt_L2.json,ldsda,ipopt,L2,-inf,-12.741461920909707,ok,17.48523426707834,3,locallyOptimal
+gdpopt.ldsda_ipopt_Linf.json,ldsda,ipopt,Linf,-inf,-12.741461920909707,ok,20.83007379155606,2,locallyOptimal

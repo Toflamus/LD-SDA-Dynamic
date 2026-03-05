@@ -1,0 +1,17 @@
+Algorithm,Subsolver,Norm,Model,Lower Bound,Upper Bound,Gap (%),Time (s),Iterations,Status,Termination
+ldbd,conopt,L2,Standard,-206.3604,-206.3604,0.00%,41.44,3,ok,optimal
+ldbd,conopt,L2,Transfer,-212.0088,-212.0088,0.00%,139.10,4,ok,optimal
+ldbd,conopt,Linf,Standard,-212.0088,-212.0088,0.00%,1442.07,4,ok,optimal
+ldbd,conopt,Linf,Transfer,-212.0088,-212.0088,0.00%,204.95,4,ok,optimal
+ldbd,ipopt,L2,Standard,-206.3604,-206.3604,0.00%,471.72,3,ok,optimal
+ldbd,ipopt,L2,Transfer,-212.0087,-212.0087,0.00%,2324.33,4,ok,optimal
+ldbd,ipopt,Linf,Standard,-212.0088,-212.0088,0.00%,2623.25,4,ok,optimal
+ldbd,ipopt,Linf,Transfer,-212.0088,-212.0088,0.00%,2457.17,4,ok,optimal
+ldsda,conopt,L2,Standard,-inf,-212.0088,inf,122.59,3,ok,locallyOptimal
+ldsda,conopt,L2,Transfer,-inf,-212.0088,inf,68.58,2,ok,locallyOptimal
+ldsda,conopt,Linf,Standard,-inf,-212.0088,inf,3375.99,2,ok,locallyOptimal
+ldsda,conopt,Linf,Transfer,-inf,-212.0088,inf,109.99,2,ok,locallyOptimal
+ldsda,ipopt,L2,Standard,-inf,-212.0088,inf,461.83,3,ok,locallyOptimal
+ldsda,ipopt,L2,Transfer,-inf,-197.1401,inf,260.89,1,ok,locallyOptimal
+ldsda,ipopt,Linf,Standard,-inf,-212.0088,inf,6324.24,2,ok,locallyOptimal
+ldsda,ipopt,Linf,Transfer,-inf,-212.0088,inf,1159.84,2,ok,locallyOptimal

@@ -1,0 +1,9 @@
+Algorithm,Subsolver,Norm,Model,Lower Bound,Upper Bound,Gap (%),Time (s),Iterations,Status,Termination
+ldbd,conopt,L2,Standard,-12.7415,-12.7415,0.00%,35.05,2,ok,optimal
+ldbd,conopt,Linf,Standard,-12.7415,-12.7415,0.00%,41.24,1,ok,optimal
+ldbd,ipopt,L2,Standard,-12.7415,-12.7415,0.00%,13.48,2,ok,optimal
+ldbd,ipopt,Linf,Standard,-12.7415,-12.7415,0.00%,18.55,1,ok,optimal
+ldsda,conopt,L2,Standard,-inf,-12.7415,inf,37.36,3,ok,locallyOptimal
+ldsda,conopt,Linf,Standard,-inf,-12.7415,inf,40.31,2,ok,locallyOptimal
+ldsda,ipopt,L2,Standard,-inf,-12.7415,inf,17.49,3,ok,locallyOptimal
+ldsda,ipopt,Linf,Standard,-inf,-12.7415,inf,20.83,2,ok,locallyOptimal
